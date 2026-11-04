@@ -1,0 +1,1110 @@
+{
+  "run_id": "20261102_135405",
+  "created_at": "2026-11-02T13:54:05",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "questions_file": "data/questions.json",
+  "max_attempts": 3,
+  "duration_s": 89.6,
+  "usage": {
+    "calls": 108,
+    "prompt_tokens": 62357,
+    "completion_tokens": 25016,
+    "est_cost_usd": 0.7497
+  },
+  "items": [
+    {
+      "id": "q01",
+      "subject": "Algebra",
+      "question": "What is the slope of the line shown in the graph?",
+      "image": "images/q01_slope.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "2",
+        "reasoning": "The line passes through (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2."
+      },
+      "plain": {
+        "alt_text": "Graph of a straight line with positive slope on a coordinate grid, x from -1 to 5 and y from -1 to 9. The line passes through two marked points, (0, 1) on the y-axis and (3, 7), giving a slope of 2 (y = 2x + 1). It crosses the x-axis at -0.5.",
+        "student_b": {
+          "answer": "2",
+          "reasoning": "The description says the line passes through the marked points (0, 1) and (3, 7). Using slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. The description also states the slope is 2 and gives the equation y = 2x + 1. The x-intercept of -0.5 matches this, since 0 = 2x + 1 gives x = -0.5.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly states the slope the question asks for and the line's equation, so Student B did not need to compute it from the points.",
+          "evidence": "giving a slope of 2 (y = 2x + 1)",
+          "fix_hint": "Remove 'giving a slope of 2 (y = 2x + 1)'. Keep only the visual details: the grid ranges, the marked points (0, 1) and (3, 7), and where the line crosses the x-axis.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Graph type: coordinate grid with one straight line",
+          "x-axis range -1 to 5, y-axis range -1 to 9, grid lines every 1 unit",
+          "Labeled points (0, 1) and (3, 7) marked with dots",
+          "(0, 1) lies on the y-axis",
+          "Line's position: from lower-left corner near (-1, -1) to top edge near x = 4, y = 9",
+          "Line crosses the x-axis between -1 and 0"
+        ],
+        "left_for_student": "Use the two labeled points to calculate the slope (change in y divided by change in x)."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Coordinate graph with a straight line and two labeled points. The x-axis runs from -1 to 5 and the y-axis from -1 to 9, with grid lines every 1 unit. Two points on the line are marked with dots and labeled (0, 1) and (3, 7). The point (0, 1) lies on the y-axis. The line extends from the lower-left corner of the grid, near (-1, -1), to the top edge of the grid, near x = 4, y = 9. It crosses the x-axis between x = -1 and x = 0.",
+          "student_b": {
+            "answer": "2",
+            "reasoning": "The description gives two labeled points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. This matches the rest of the description: with slope 2 and y-intercept 1, the line passes through (-1, -1) and (4, 9), and it crosses the x-axis at x = -0.5, which is between -1 and 0.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students correctly found a slope of 2, and Student B had to compute it from the two labeled points the description gives; the description never states the slope.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Coordinate graph with a straight line and two labeled points. The x-axis runs from -1 to 5 and the y-axis from -1 to 9, with grid lines every 1 unit. Two points on the line are marked with dots and labeled (0, 1) and (3, 7). The point (0, 1) lies on the y-axis. The line extends from the lower-left corner of the grid, near (-1, -1), to the top edge of the grid, near x = 4, y = 9. It crosses the x-axis between x = -1 and x = 0.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": true,
+        "approved_by": "sasmi",
+        "approved_at": "2026-11-02T14:08:41",
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q02",
+      "subject": "Statistics",
+      "question": "In which month did Riverton get the most rainfall?",
+      "image": "images/q02_bar.png",
+      "answer": "April",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "April",
+        "reasoning": "1. Read the bar values: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55 (mm). 2. Compare them: 94 is the largest value. 3. April has the tallest bar, so it got the most rainfall."
+      },
+      "plain": {
+        "alt_text": "Bar chart titled 'Monthly Rainfall in Riverton' showing rainfall in millimeters from January to June: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55. Rainfall rises from a low in February to a peak in April, then declines through June.",
+        "student_b": {
+          "answer": "April",
+          "reasoning": "The description lists monthly rainfall as Jan 62, Feb 48, Mar 71, Apr 94, May 83 and Jun 55 mm. The largest value is April at 94 mm. The description also says rainfall peaks in April.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly states that rainfall peaks in April, so Student B can answer without comparing the values.",
+          "evidence": "Rainfall rises from a low in February to a peak in April, then declines through June.",
+          "fix_hint": "Remove the summary sentence about the low and peak months and keep only the title, axis units, and the per-month values (Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55).",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: vertical bar chart",
+          "Title: Monthly Rainfall in Riverton",
+          "Vertical axis label: Rainfall (mm)",
+          "Vertical axis scale: 0 to 100 in steps of 20, plot area extending slightly above 100",
+          "Horizontal axis: six months, January to June, in order",
+          "All bars are the same green color",
+          "Printed values above each bar: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55"
+        ],
+        "left_for_student": "Compare the six monthly rainfall values to determine which month had the most rainfall."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Vertical bar chart titled 'Monthly Rainfall in Riverton'. The vertical axis is labeled 'Rainfall (mm)' and runs from 0 to 100 in steps of 20, with the plot area extending slightly above 100. The horizontal axis lists six months, January through June, each with one green bar. The value is printed above each bar: January, 62. February, 48. March, 71. April, 94. May, 83. June, 55.",
+          "student_b": {
+            "answer": "April",
+            "reasoning": "The description gives the value printed above each bar: January 62, February 48, March 71, April 94, May 83, June 55. The largest value is April's 94 mm, so April had the most rainfall.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description gives the same axis labels and printed bar values the sighted student sees and never says which month is highest, so Student B still had to compare the values to find April.",
+            "evidence": "'April' appears only as a horizontal-axis category label alongside the other months, with no statement that it is the highest.",
+            "fix_hint": "No change needed; keep listing each bar's printed value without calling out the maximum.",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Vertical bar chart titled 'Monthly Rainfall in Riverton'. The vertical axis is labeled 'Rainfall (mm)' and runs from 0 to 100 in steps of 20, with the plot area extending slightly above 100. The horizontal axis lists six months, January through June, each with one green bar. The value is printed above each bar: January, 62. February, 48. March, 71. April, 94. May, 83. June, 55.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q03",
+      "subject": "Statistics",
+      "question": "How did enrollment at Lakeside College change from 2015 to 2020?",
+      "image": "images/q03_trend.png",
+      "answer": "B",
+      "answer_type": "choice",
+      "options": [
+        "A) It decreased",
+        "B) It increased every year",
+        "C) It increased, then decreased",
+        "D) It stayed the same"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "B",
+        "reasoning": "Step 1: Read the values from the graph: 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), 1520 (2020). Step 2: Compare each year with the one before it. Every value is higher than the previous one, so there are no decreases. Step 3: Enrollment therefore increased every year, rising from 1200 to 1520 students."
+      },
+      "plain": {
+        "alt_text": "Line chart titled Lakeside College Enrollment showing student numbers rising steadily from 2015 to 2020: 1,200 in 2015, 1,260 in 2016, 1,310 in 2017, 1,395 in 2018, 1,440 in 2019, and 1,520 in 2020, an overall increase of 320 students.",
+        "student_b": {
+          "answer": "B",
+          "reasoning": "The description lists enrollment for each year: 1,200 (2015), 1,260 (2016), 1,310 (2017), 1,395 (2018), 1,440 (2019) and 1,520 (2020). Each value is higher than the one before, so enrollment increased every year, for a total rise of 320 students.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description states the trend the question asks about ('rising steadily') and adds a computed total increase, so Student B did not need to compare the yearly values to reach answer B.",
+          "evidence": "showing student numbers rising steadily from 2015 to 2020 ... an overall increase of 320 students",
+          "fix_hint": "Remove 'rising steadily' and 'an overall increase of 320 students'. Describe only the chart title, axes, and the plotted values for each year (e.g., 'Line chart titled Lakeside College Enrollment with points at 2015: 1,200; 2016: 1,260; ...; 2020: 1,520') so the trend must be inferred.",
+          "answer_found_in_text": false
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Graph type: line graph with marked data points connected by a line",
+          "Title: Lakeside College Enrollment",
+          "Horizontal axis label 'Year' with tick marks 2015 to 2020",
+          "Vertical axis label 'Students' with scale 1100 to 1600 in steps of 100",
+          "All six printed data values paired with their years",
+          "Points connected in year order"
+        ],
+        "left_for_student": "Determining the direction and pattern of change in enrollment from 2015 to 2020, such as whether it rose or fell, by how much overall, and how the year-to-year changes compare."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Line graph titled 'Lakeside College Enrollment.' The horizontal axis is labeled 'Year' and shows 2015 through 2020, one year apart. The vertical axis is labeled 'Students' and runs from 1100 to 1600 in steps of 100. Six points, each labeled with its value, are connected by a line in year order: 2015, 1200; 2016, 1260; 2017, 1310; 2018, 1395; 2019, 1440; 2020, 1520.",
+          "student_b": {
+            "answer": "B",
+            "reasoning": "The description gives a labeled value for every year: 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), 1520 (2020). Each value is higher than the one before, so enrollment increased every year.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students chose B; the description lists only the printed point labels that the sighted student also sees and never states the trend, so Student B still had to compare consecutive values to conclude that enrollment rose every year.",
+            "evidence": "",
+            "fix_hint": "No change needed. Student B's 'answer_given_in_description: true' flag is not a leak, because the listed values are labels visible in the image and the conclusion 'increased every year' does not appear in the description.",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Line graph titled 'Lakeside College Enrollment.' The horizontal axis is labeled 'Year' and shows 2015 through 2020, one year apart. The vertical axis is labeled 'Students' and runs from 1100 to 1600 in steps of 100. Six points, each labeled with its value, are connected by a line in year order: 2015, 1200; 2016, 1260; 2017, 1310; 2018, 1395; 2019, 1440; 2020, 1520.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q04",
+      "subject": "Economics",
+      "question": "What percentage of the monthly budget goes to Food and Transport combined?",
+      "image": "images/q04_pie.png",
+      "answer": "35",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "35%",
+        "reasoning": "1. The chart labels Food as 20%. 2. It labels Transport as 15%. 3. Adding them gives 20% + 15% = 35%."
+      },
+      "plain": {
+        "alt_text": "Pie chart titled 'Monthly Household Budget' showing spending by category: Housing 35%, Food 20%, Other 20%, Transport 15%, and Savings 10%. Housing is the largest share of the budget.",
+        "student_b": {
+          "answer": "35%",
+          "reasoning": "The description gives Food as 20% and Transport as 15%. Adding them gives 20% + 15% = 35%.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students reached 35 by adding Food (20%) and Transport (15%); the '35%' in the description is Housing's printed share, which the sighted student also sees, so it does not give away the combined total.",
+          "evidence": "Housing 35% (an innocent label coincidence, not the Food+Transport sum)",
+          "fix_hint": "No change needed; the description gives the individual category values without stating the combined total.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: pie chart",
+          "Title: Monthly Household Budget",
+          "Five slices with category labels",
+          "Printed percentage for each slice: Housing 35%, Food 20%, Transport 15%, Savings 10%, Other 20%",
+          "Slice colors and positions in clockwise order from the top"
+        ],
+        "left_for_student": "Identify the Food and Transport percentages and add them to find the combined share of the budget."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Pie chart titled 'Monthly Household Budget' with five slices, each labeled with a category and percentage. Going clockwise from the top: Housing 35%, a blue slice on the right side; Food 20%, an orange slice at the lower right; Transport 15%, a green slice at the lower left; Savings 10%, a red slice on the left; and Other 20%, a purple slice at the upper left.",
+          "student_b": {
+            "answer": "35%",
+            "reasoning": "The description gives Food as 20% and Transport as 15%. Adding them gives 20% + 15% = 35%.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students reached 35 by adding Food (20%) and Transport (15%); the '35%' in the description is Housing's printed slice label, which the sighted student also sees, not a statement of the combined total.",
+            "evidence": "Housing 35% (an innocent printed label, not the Food+Transport sum)",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Pie chart titled 'Monthly Household Budget' with five slices, each labeled with a category and percentage. Going clockwise from the top: Housing 35%, a blue slice on the right side; Food 20%, an orange slice at the lower right; Transport 15%, a green slice at the lower left; Savings 10%, a red slice on the left; and Other 20%, a purple slice at the upper left.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q05",
+      "subject": "Statistics",
+      "question": "How many students in Class 9B scored 80 or above?",
+      "image": "images/q05_hist.png",
+      "answer": "10",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "10",
+        "reasoning": "Scores of 80 or above fall in the 80–89 and 90–100 bars. The 80–89 bar reaches 7 and the 90–100 bar reaches 3. Adding them gives 7 + 3 = 10 students."
+      },
+      "plain": {
+        "alt_text": "Histogram titled 'Exam Scores, Class 9B' showing the number of students in each score range: 60–69, 4 students; 70–79, 9 students; 80–89, 7 students; 90–100, 3 students. The 70–79 range is the most common, for a total of 23 students.",
+        "student_b": {
+          "answer": "10",
+          "reasoning": "The description gives two score ranges at 80 or above: 80–89 with 7 students and 90–100 with 3 students. Adding them gives 7 + 3 = 10 students. As a check, all four ranges add up to 4 + 9 + 7 + 3 = 23, which matches the stated total.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students answered 10, and Student B had to add the 80–89 and 90–100 bar values (7 + 3) just as Student A read and added them from the image.",
+          "evidence": "",
+          "fix_hint": "No change needed. Optionally drop the added conclusions ('most common', 'total of 23') so the description sticks to the visible bar values.",
+          "answer_found_in_text": false
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: histogram with adjacent bars",
+          "Title: Exam Scores, Class 9B",
+          "Horizontal axis label: Score",
+          "Vertical axis label: Number of students",
+          "Vertical scale: 0 to 10 in steps of 1 with gridlines",
+          "Four score ranges in order: 60–69, 70–79, 80–89, 90–100",
+          "Bar heights as read from the scale: 4, 9, 7, 3",
+          "Bar tops align with whole-number gridlines"
+        ],
+        "left_for_student": "Identify which score ranges include scores of 80 or above, and add the number of students in those ranges."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Histogram titled 'Exam Scores, Class 9B'. The horizontal axis is labeled 'Score' and shows four adjacent bars for score ranges. The vertical axis is labeled 'Number of students' and runs from 0 to 10 in steps of 1, with light horizontal gridlines at each whole number. Bar heights, from left to right: 60–69, 4 students; 70–79, 9 students; 80–89, 7 students; 90–100, 3 students. Each bar top lines up exactly with a gridline.",
+          "student_b": {
+            "answer": "10",
+            "reasoning": "Scores of 80 or above fall in the 80–89 bar (7 students) and the 90–100 bar (3 students). 7 + 3 = 10. The bins line up with the 80 cutoff, so no bin is split.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students reached 10 by adding the 80–89 and 90–100 bar heights (7 + 3); the '10' in the description is only the axis maximum, which the sighted student also sees, so it gives nothing away.",
+            "evidence": "vertical axis ... runs from 0 to 10 in steps of 1",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Histogram titled 'Exam Scores, Class 9B'. The horizontal axis is labeled 'Score' and shows four adjacent bars for score ranges. The vertical axis is labeled 'Number of students' and runs from 0 to 10 in steps of 1, with light horizontal gridlines at each whole number. Bar heights, from left to right: 60–69, 4 students; 70–79, 9 students; 80–89, 7 students; 90–100, 3 students. Each bar top lines up exactly with a gridline.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q06",
+      "subject": "Biology",
+      "question": "Which letter labels the nucleus?",
+      "image": "images/q06_cell.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "A",
+        "reasoning": "1. Label A points to the large purple structure near the center of the cell. Its line ends at the dark spot inside it, which is the nucleolus, and that spot sits within the nucleus, so A is the best match. 2. Label B points to the green outer boundary, which is the cell membrane. 3. Label C points to a red oval, likely a mitochondrion. 4. Label D points to a light blue circle, likely a vacuole or vesicle."
+      },
+      "plain": {
+        "alt_text": "Labeled diagram of an animal cell: a green oval outline labeled B (cell membrane); a central purple circle with a black dot, with label A pointing to the black dot (nucleolus); a light blue circle labeled D (likely a vacuole); and two red oval structures, one labeled C (mitochondria).",
+        "student_b": {
+          "answer": "A",
+          "reasoning": "The nucleus is the central purple circle with a black dot. The other labels are assigned to different structures: B is the cell membrane, C is a mitochondrion and D is likely a vacuole. A is the only label on the nucleus region, so A is the answer by elimination. The description says A points to the black dot inside the purple circle (the nucleolus), not to the purple circle itself. The answer therefore relies on elimination rather than a direct statement.",
+          "answer_given_in_description": false,
+          "missing": "Whether label A is meant to mark the whole nucleus (purple circle) or only the nucleolus (black dot). The description does not directly assign any letter to the nucleus."
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students chose A, and Student B had to infer that the purple circle with the black dot is the nucleus and that label A marks it, since the description never names the nucleus.",
+          "evidence": "a central purple circle with a black dot, with label A pointing to the black dot (nucleolus)",
+          "fix_hint": "No change needed. Optionally, describe structures only by appearance (e.g., 'green oval outline', 'red ovals') rather than naming them, so Student B has to identify every part as Student A did.",
+          "answer_found_in_text": false
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Title: Diagram of an animal cell",
+          "Green oval outline forming the cell boundary",
+          "Large purple circle near the center with a small black dot in its middle",
+          "Smaller light blue circle up and to the right of the purple circle",
+          "Two small red ovals, one at lower left and one at lower right",
+          "Label A's line ends at the black dot inside the purple circle",
+          "Label D points to the light blue circle",
+          "Label B points to the green outline on the right side",
+          "Label C points to the lower-right red oval",
+          "The lower-left red oval has no label"
+        ],
+        "left_for_student": "The student must use knowledge of animal cell structure to decide which shape is the nucleus and which letter labels it."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Diagram titled 'Diagram of an animal cell.' A large oval with a green outline contains several colored shapes. Near the center is a large purple circle with a small black dot in its middle. Up and to the right of it is a smaller light blue circle. Two small red ovals sit in the lower part of the cell, one at lower left and one at lower right. Four letters have pointer lines. Label A, at top left, has a line ending at the black dot inside the purple circle. Label D, at top, points to the light blue circle. Label B, at right, points to the green outline on the right side. Label C, at bottom right, points to the lower-right red oval. The lower-left red oval is unlabeled.",
+          "student_b": {
+            "answer": "CANNOT_ANSWER",
+            "reasoning": "From the description, the large central purple circle is the nucleus. However, no label is said to point to the purple circle itself. Label A's line ends at the small black dot inside it, which would normally be the nucleolus, not the nucleus. D points to the light blue circle, B to the green outline (cell membrane), and C to a red oval. A is the only label inside the nucleus, but because its line ends at the nucleolus-like dot, I cannot confirm that A labels the nucleus rather than the nucleolus.",
+            "answer_given_in_description": false,
+            "missing": "Whether Label A is meant to identify the whole purple circle (nucleus) or only the black dot inside it (nucleolus). The description also does not show any label pointing to the purple circle's body or outline."
+          },
+          "verdict": {
+            "status": "ORANGE",
+            "reason": "Student A is correct, but Student B answered CANNOT_ANSWER because the description stresses that A's line ends at the black dot (nucleolus-like) without making clear that A is the label for the purple circle as a whole.",
+            "evidence": "Label A, at top left, has a line ending at the black dot inside the purple circle.",
+            "fix_hint": "Describe the visual layout neutrally so a listener sees what a viewer sees: Label A's pointer line crosses the purple circle's outline and runs into its interior, ending at the central dot. A is the only label that reaches the purple circle, and no separate label marks the dot alone. Do not state that A is the nucleus.",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        },
+        {
+          "attempt": 2,
+          "alt_text": "Diagram titled 'Diagram of an animal cell.' A large oval with a green outline contains several colored shapes. Near the center is a large purple circle with a small black dot in its middle. Up and to the right of it is a smaller light blue circle. Two small red ovals sit in the lower part of the cell, one at lower left and one at lower right. Four letters have pointer lines. Label A, at top left, has a line that crosses the purple circle's outline and runs into its interior, ending at the black dot in the middle. A is the only label whose line reaches the purple circle; no other label points to the purple circle or to the black dot separately. Label D, at top, points to the light blue circle. Label B, at right, points to the green outline on the right side. Label C, at bottom right, points to the lower-right red oval. The lower-left red oval is unlabeled.",
+          "student_b": {
+            "answer": "A",
+            "reasoning": "The large purple circle near the center with a small dark dot inside matches the standard look of a nucleus with its nucleolus, which is normal subject knowledge. Label A is the only label whose line reaches the purple circle: it crosses the outline and ends at the central dot. No other label points to the purple circle or the dot. B points to the outer green outline (the cell membrane), C points to a red oval, and D points to the light blue circle. So A is the only option that can label the nucleus. One caveat: A's line ends at the inner dot, which could mean the nucleolus. However, the description says there is no separate label for the dot, so A is the best answer.",
+            "answer_given_in_description": false,
+            "missing": "The description does not name any structure. The nucleus was identified from its appearance using general biology knowledge."
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students chose A, and Student B had to recognize the purple circle with a central dot as the nucleus from general biology knowledge because the description never names any structure.",
+            "evidence": "No structure names appear; the description only gives shapes, colors and pointer endpoints, such as 'A is the only label whose line reaches the purple circle.'",
+            "fix_hint": "Optionally trim the summary sentence 'A is the only label whose line reaches the purple circle; no other label points to the purple circle or to the black dot separately,' since the individual pointer descriptions already convey this without steering.",
+            "answer_found_in_text": false
+          },
+          "what_changed": "Described Label A's line as crossing the purple circle's outline into its interior and noted that A is the only label reaching the purple circle or its dot, without naming any structure."
+        }
+      ],
+      "final_alt_text": "Diagram titled 'Diagram of an animal cell.' A large oval with a green outline contains several colored shapes. Near the center is a large purple circle with a small black dot in its middle. Up and to the right of it is a smaller light blue circle. Two small red ovals sit in the lower part of the cell, one at lower left and one at lower right. Four letters have pointer lines. Label A, at top left, has a line that crosses the purple circle's outline and runs into its interior, ending at the black dot in the middle. A is the only label whose line reaches the purple circle; no other label points to the purple circle or to the black dot separately. Label D, at top, points to the light blue circle. Label B, at right, points to the green outline on the right side. Label C, at bottom right, points to the lower-right red oval. The lower-left red oval is unlabeled.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q07",
+      "subject": "Physics",
+      "question": "What is the current flowing in the circuit, in amperes?",
+      "image": "images/q07_circuit.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "2 A",
+        "reasoning": "The 2 Ω and 4 Ω resistors are in series, so the total resistance is 2 + 4 = 6 Ω. By Ohm's law, I = V/R = 12 V / 6 Ω = 2 A."
+      },
+      "plain": {
+        "alt_text": "Circuit diagram of a single series loop: a 12 V battery, with its positive terminal at the top, connects to a 2 Ω resistor followed by a 4 Ω resistor along the top wire, and the circuit returns to the battery's negative terminal along the bottom wire.",
+        "student_b": {
+          "answer": "2 A",
+          "reasoning": "The description gives a single series loop with a 12 V battery and two resistors, 2 Ω and 4 Ω. Resistances in series add: R = 2 + 4 = 6 Ω. By Ohm's law, I = V / R = 12 V / 6 Ω = 2 A. In a series loop the same current flows everywhere. This treats the battery as ideal, since the description mentions no internal resistance.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students got 2 A, and Student B had to compute it with Ohm's law from the described voltage and resistances; the '2' in the description is only the printed label of the 2 Ω resistor, not the current.",
+          "evidence": "Matched text '2' comes from '2 Ω resistor', a component value that Student A also sees in the image.",
+          "fix_hint": "No change needed.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Diagram title: Circuit diagram",
+          "Battery voltage: 12 V",
+          "Battery polarity: positive terminal on top, negative on bottom",
+          "Resistor values: 2 Ω and 4 Ω",
+          "Order of resistors along the top wire",
+          "Single loop with no branches (components connected one after another)"
+        ],
+        "left_for_student": "Determine the total resistance of the circuit and use it with the battery voltage to calculate the current in amperes."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Circuit diagram titled 'Circuit diagram'. A single closed loop of wire connects a battery and two resistors. The battery is on the left side, labeled 12 V, with its positive terminal (marked +) on top and its negative terminal (marked −) below. From the positive terminal, the wire goes up and right along the top of the loop, passing first through a resistor labeled 2 Ω and then through a resistor labeled 4 Ω. The wire then continues down the right side, along the bottom, and back to the battery's negative terminal. There are no branches; all components are in one loop.",
+          "student_b": {
+            "answer": "2 A",
+            "reasoning": "The description says the 12 V battery, the 2 Ω resistor and the 4 Ω resistor form a single loop with no branches, so the resistors are in series. Total resistance = 2 + 4 = 6 Ω. By Ohm's law, I = V/R = 12 V / 6 Ω = 2 A. This assumes an ideal battery and wires, since no internal resistance is mentioned.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students correctly computed 2 A from the series resistance and Ohm's law; the '2' in the description is only the printed 2 Ω resistor label, which the sighted student also sees, not the current.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Circuit diagram titled 'Circuit diagram'. A single closed loop of wire connects a battery and two resistors. The battery is on the left side, labeled 12 V, with its positive terminal (marked +) on top and its negative terminal (marked −) below. From the positive terminal, the wire goes up and right along the top of the loop, passing first through a resistor labeled 2 Ω and then through a resistor labeled 4 Ω. The wire then continues down the right side, along the bottom, and back to the battery's negative terminal. There are no branches; all components are in one loop.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q08",
+      "subject": "Physics",
+      "question": "What is the size of the net force on the box, in newtons?",
+      "image": "images/q08_forces.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "6 N",
+        "reasoning": "1) A 10 N force pulls the box to the right. 2) A 4 N force pulls it to the left. 3) The forces point in opposite directions, so subtract them: 10 N - 4 N = 6 N. 4) The floor is frictionless, so no other horizontal force acts. The net force is 6 N, directed to the right."
+      },
+      "plain": {
+        "alt_text": "Free-body diagram of a gray box on a frictionless floor with two horizontal forces: a red arrow pointing left labeled 4 N and a longer blue arrow pointing right labeled 10 N, giving a net force of 6 N to the right.",
+        "student_b": {
+          "answer": "6 N",
+          "reasoning": "The description gives two horizontal forces on the box: 10 N to the right and 4 N to the left. Because they point in opposite directions, the net force is 10 − 4 = 6 N, directed to the right. The description also states this net force of 6 N explicitly, and the calculation agrees with it.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description explicitly states the computed net force of 6 N, which is exactly what the question asks for, so Student B did not need to reason.",
+          "evidence": "giving a net force of 6 N to the right",
+          "fix_hint": "Remove the clause 'giving a net force of 6 N to the right' and describe only the two labeled forces, their directions, and the frictionless floor.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Type of image: force diagram",
+          "Box shown as a gray square",
+          "Caption: Box on a frictionless floor",
+          "Red arrow pointing left, labeled 4 N",
+          "Blue arrow pointing right, labeled 10 N",
+          "Both forces are horizontal and in opposite directions",
+          "Blue arrow drawn longer than red arrow",
+          "No other forces shown"
+        ],
+        "left_for_student": "Combine the two opposing horizontal forces to find the size of the net force on the box."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Force diagram of a box with two horizontal arrows. A gray square labeled 'Box on a frictionless floor' sits near the left-center of the diagram. A red arrow points to the left from the box's left side, labeled 4 N. A blue arrow points to the right from the box's right side, labeled 10 N. The blue arrow is longer than the red arrow. No other forces are shown.",
+          "student_b": {
+            "answer": "6 N",
+            "reasoning": "The box has only two forces on it, and both are horizontal. One is 10 N to the right and the other is 4 N to the left. Because they point in opposite directions, the net force is 10 N - 4 N = 6 N, directed to the right. The floor is frictionless and the description says no other forces are shown, so nothing else needs to be counted.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students correctly answered 6 N, and Student B had to work it out by subtracting the opposing 10 N and 4 N forces, the same reasoning Student A did from the image.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Force diagram of a box with two horizontal arrows. A gray square labeled 'Box on a frictionless floor' sits near the left-center of the diagram. A red arrow points to the left from the box's left side, labeled 4 N. A blue arrow points to the right from the box's right side, labeled 10 N. The blue arrow is longer than the red arrow. No other forces are shown.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q09",
+      "subject": "Physics",
+      "question": "How far from the lens, in centimetres, is the image formed?",
+      "image": "images/q09_lens.png",
+      "answer": "15",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "15 cm",
+        "reasoning": "Use the thin lens equation 1/f = 1/d_o + 1/d_i, with f = 10 cm and d_o = 30 cm. Rearranging gives 1/d_i = 1/10 − 1/30 = 3/30 − 1/30 = 2/30, so d_i = 15 cm. The image is real and inverted, 15 cm from the lens on the opposite side from the object."
+      },
+      "plain": {
+        "alt_text": "Ray diagram setup for a converging lens. A red upward arrow labeled 'Object' stands on the horizontal principal axis 30 cm to the left of a vertical blue converging lens. Focal points labeled F are marked on both sides of the lens, each at a focal length f = 10 cm from the lens.",
+        "student_b": {
+          "answer": "15",
+          "reasoning": "The description gives an object distance of u = 30 cm and a converging lens with focal length f = 10 cm. The thin lens equation is 1/f = 1/u + 1/v, using real-is-positive. So 1/v = 1/10 − 1/30 = 3/30 − 1/30 = 2/30, which gives v = 15 cm. The image is real and forms 15 cm from the lens on the opposite side from the object.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students correctly get 15 cm, and Student B had to apply the thin lens equation to the object distance and focal length given in the description, which never states the image distance.",
+          "evidence": "",
+          "fix_hint": "",
+          "answer_found_in_text": false
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Diagram type: lens setup on a horizontal principal axis",
+          "Converging lens, labeled, near the center",
+          "Object drawn as an upward arrow on the left side",
+          "Object-to-lens distance labeled 30 cm",
+          "Focal points labeled F on both sides of the lens, equally spaced",
+          "Focal length labeled f = 10 cm, measured from the lens to the right-hand F",
+          "No rays or image shown"
+        ],
+        "left_for_student": "Use the object distance and focal length (for example, with the thin lens equation) to find how far from the lens the image forms."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Ray diagram setup showing an object and a converging lens on a horizontal principal axis. A vertical blue converging lens, labeled 'Converging lens', stands near the middle of the axis. On the left, a red upward-pointing arrow labeled 'Object' rests on the axis. A dimension line below the axis marks the distance from the object to the lens as 30 cm. Two black dots labeled F mark focal points, one on each side of the lens at equal distances. A second dimension line from the lens to the right-hand F is labeled f = 10 cm. No rays or image are drawn.",
+          "student_b": {
+            "answer": "15",
+            "reasoning": "From the description, the object is 30 cm from the converging lens and the focal length is 10 cm. The lens equation gives 1/v = 1/10 - 1/30 = 1/15, so v = 15 cm. The image is real and forms 15 cm from the lens on the opposite side from the object.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students correctly reached 15 cm, and Student B had to apply the lens equation to the described object distance (30 cm) and focal length (10 cm), just as Student A did from the image.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Ray diagram setup showing an object and a converging lens on a horizontal principal axis. A vertical blue converging lens, labeled 'Converging lens', stands near the middle of the axis. On the left, a red upward-pointing arrow labeled 'Object' rests on the axis. A dimension line below the axis marks the distance from the object to the lens as 30 cm. Two black dots labeled F mark focal points, one on each side of the lens at equal distances. A second dimension line from the lens to the right-hand F is labeled f = 10 cm. No rays or image are drawn.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q10",
+      "subject": "Economics",
+      "question": "What is the equilibrium price in the market for notebooks, in dollars?",
+      "image": "images/q10_supply_demand.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "6",
+        "reasoning": "1) From the graph, demand starts at $10 at Q=0 and falls to $2 at Q=80, so P = 10 - 0.1Q. 2) Supply starts at $2 at Q=0 and rises to $10 at Q=80, so P = 2 + 0.1Q. 3) Setting them equal: 10 - 0.1Q = 2 + 0.1Q, so Q = 40 thousand units. 4) Substituting back gives P = 10 - 4 = $6, which matches where the curves cross on the graph."
+      },
+      "plain": {
+        "alt_text": "Supply and demand graph titled Market for Notebooks, with price in dollars on the vertical axis (0 to 10) and quantity in thousands of units on the horizontal axis (0 to 80). The downward-sloping demand curve D runs from $10 at 0 units to $2 at 80,000 units. The upward-sloping supply curve S runs from $2 at 0 units to $10 at 80,000 units. The curves intersect at the equilibrium price of $6 and quantity of 40,000 units.",
+        "student_b": {
+          "answer": "6",
+          "reasoning": "The description says the supply and demand curves intersect at an equilibrium price of $6 and a quantity of 40,000 units. The curve endpoints agree: demand runs linearly from $10 to $2 and supply from $2 to $10 over 0 to 80,000 units, so they cross at the midpoint, $6 and 40,000 units.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly states the equilibrium price of $6, which is exactly what the question asks for, so Student B could read the answer instead of working it out from the curves.",
+          "evidence": "The curves intersect at the equilibrium price of $6 and quantity of 40,000 units.",
+          "fix_hint": "Remove the sentence stating the intersection's price and quantity. Describe only the axes and the endpoints of the demand and supply curves, and say that the curves intersect without giving the coordinates.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Graph type and title",
+          "Axis labels, units, ranges, and tick intervals",
+          "Demand line (D) endpoints: (0, $10) and (80, $2)",
+          "Supply line (S) endpoints: (0, $2) and (80, $10)",
+          "Both lines are straight",
+          "The lines cross once"
+        ],
+        "left_for_student": "Determine where the supply and demand lines intersect and identify the equilibrium price."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Line graph titled 'Market for Notebooks' showing two straight lines on a grid. The horizontal axis is Quantity (thousands of units), from 0 to 80 in steps of 10. The vertical axis is Price in dollars, from 0 to 10 in steps of 1. A downward-sloping line labeled D runs from a price of 10 dollars at quantity 0 to a price of 2 dollars at quantity 80. An upward-sloping line labeled S runs from a price of 2 dollars at quantity 0 to a price of 10 dollars at quantity 80. The two lines cross once.",
+          "student_b": {
+            "answer": "6",
+            "reasoning": "Both lines are straight, so their equations follow from the endpoints. Demand runs from (0, 10) to (80, 2), so its slope is -8/80 = -0.1 and P = 10 - 0.1Q. Supply runs from (0, 2) to (80, 10), so its slope is 8/80 = 0.1 and P = 2 + 0.1Q. Setting them equal gives 10 - 0.1Q = 2 + 0.1Q, so Q = 40 (thousand units). Then P = 10 - 0.1(40) = 6 dollars.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description gives only the axis ranges and line endpoints, not the crossing point, so Student B had to derive the equilibrium price of $6 by solving the line equations, just as Student A did.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Line graph titled 'Market for Notebooks' showing two straight lines on a grid. The horizontal axis is Quantity (thousands of units), from 0 to 80 in steps of 10. The vertical axis is Price in dollars, from 0 to 10 in steps of 1. A downward-sloping line labeled D runs from a price of 10 dollars at quantity 0 to a price of 2 dollars at quantity 80. An upward-sloping line labeled S runs from a price of 2 dollars at quantity 0 to a price of 10 dollars at quantity 80. The two lines cross once.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q11",
+      "subject": "Statistics",
+      "question": "What type of correlation does the scatter plot show between hours studied and test score?",
+      "image": "images/q11_scatter.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A) Positive",
+        "B) Negative",
+        "C) No correlation"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "A) Positive",
+        "reasoning": "1) Read the points: 1 hr ≈ 52, 2 hrs ≈ 55–60, 3 hrs ≈ 61, 4 hrs ≈ 63–66, 5 hrs ≈ 70, 6 hrs ≈ 72–76, 7 hrs ≈ 78, 8 hrs ≈ 83, 9 hrs ≈ 88. 2) As hours studied increase, test scores also increase. 3) The points rise from lower-left to upper-right in a nearly straight line. 4) This pattern is a strong positive correlation."
+      },
+      "plain": {
+        "alt_text": "Scatter plot titled 'Study Time and Test Scores' showing hours studied (1 to 9) versus test score. The 12 points show a strong positive linear trend: scores rise from 52 at 1 hour to 88 at 9 hours. Approximate values: 1 hr, 52; 2 hrs, 55 and 60; 3 hrs, 61; 4 hrs, 63 and 66; 5 hrs, 70; 6 hrs, 72 and 76; 7 hrs, 78; 8 hrs, 83; 9 hrs, 88.",
+        "student_b": {
+          "answer": "A) Positive",
+          "reasoning": "The description says the points show a strong positive linear trend. The listed values agree: scores rise from 52 at 1 hour to 88 at 9 hours, so test scores go up as hours studied go up. That is a positive correlation.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly states the conclusion the question asks for, so Student B only had to repeat the phrase 'positive' instead of reading the trend from the data.",
+          "evidence": "The 12 points show a strong positive linear trend",
+          "fix_hint": "Remove the phrase 'strong positive linear trend' and any wording that labels the trend direction. Describe only the title, the axes and their ranges, and the approximate coordinates of the points, so the student must infer the correlation from the values.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: scatter plot",
+          "Title: Study Time and Test Scores",
+          "Horizontal axis label and scale: Hours studied, 1 to 9 in steps of 1",
+          "Vertical axis label and scale: Test score, 55 to 85 in steps of 5",
+          "Presence of gridlines",
+          "Number of points: 12",
+          "Approximate coordinates of all 12 points, listed in order of hours studied"
+        ],
+        "left_for_student": "The student must determine from the point coordinates how test score changes as hours studied changes. This includes the direction and strength of the relationship and the type of correlation it shows."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Scatter plot titled 'Study Time and Test Scores' with 12 points and light gridlines. The horizontal axis is labeled 'Hours studied' and is marked from 1 to 9 in steps of 1. The vertical axis is labeled 'Test score' and is marked from 55 to 85 in steps of 5. Approximate points, given as hours then score: 1 hour, 52. 2 hours, 55. 2 hours, 60. 3 hours, 61. 4 hours, 63. 4 hours, 66. 5 hours, 70. 6 hours, 72. 6 hours, 76. 7 hours, 78. 8 hours, 83. 9 hours, 88.",
+          "student_b": {
+            "answer": "A",
+            "reasoning": "The listed points show test scores rising steadily as hours studied increase, from 52 at 1 hour to 88 at 9 hours, with no decreases. Both variables increase together, which is a positive correlation.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students answered Positive, and the description gives only point coordinates without naming the trend, so Student B had to infer the correlation from the data just as Student A did from the image.",
+            "evidence": "",
+            "fix_hint": "None required. Optionally note that the 52 and 88 points fall slightly outside the stated 55–85 axis range, or extend the axis range to match.",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Scatter plot titled 'Study Time and Test Scores' with 12 points and light gridlines. The horizontal axis is labeled 'Hours studied' and is marked from 1 to 9 in steps of 1. The vertical axis is labeled 'Test score' and is marked from 55 to 85 in steps of 5. Approximate points, given as hours then score: 1 hour, 52. 2 hours, 55. 2 hours, 60. 3 hours, 61. 4 hours, 63. 4 hours, 66. 5 hours, 70. 6 hours, 72. 6 hours, 76. 7 hours, 78. 8 hours, 83. 9 hours, 88.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q12",
+      "subject": "Geography",
+      "question": "In Country X, which age group has the largest percentage of females?",
+      "image": "images/q12_pyramid.png",
+      "answer": "20-29",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "20–29",
+        "reasoning": "1) The pink bars on the right show the female percentages. 2) Their values are: 0–9 = 4.9, 10–19 = 5.4, 20–29 = 7.2, 30–39 = 6.3, 40–49 = 5.0, 50–59 = 4.1, 60+ = 3.9. 3) The largest is 7.2%, for the 20–29 age group."
+      },
+      "plain": {
+        "alt_text": "Population pyramid for Country X showing the percentage of the population by age group, with males as blue bars extending left and females as pink bars extending right. The pyramid bulges at ages 20–29, the largest group for both sexes (male 6.8%, female 7.2%), and narrows toward older ages. Values, male then female: 0–9: 5.1%, 4.9%; 10–19: 5.6%, 5.4%; 20–29: 6.8%, 7.2%; 30–39: 6.0%, 6.3%; 40–49: 4.9%, 5.0%; 50–59: 3.8%, 4.1%; 60+: 3.0%, 3.9%. Males slightly outnumber females under age 20, while females outnumber males from age 20 upward, with the widest gap at 60+.",
+        "student_b": {
+          "answer": "20–29",
+          "reasoning": "The female values by age group are: 0–9: 4.9%, 10–19: 5.4%, 20–29: 7.2%, 30–39: 6.3%, 40–49: 5.0%, 50–59: 4.1%, 60+: 3.9%. The highest is 7.2%, for ages 20–29. The description also says directly that 20–29 is the largest group for both sexes.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly names 20–29 as the largest group for both sexes, which is exactly what the question asks, so Student B did not have to compare the female values.",
+          "evidence": "The pyramid bulges at ages 20–29, the largest group for both sexes (male 6.8%, female 7.2%)",
+          "fix_hint": "Remove the phrase identifying 20–29 as the largest group (and the 'bulges at ages 20–29' wording). Keep only the neutral list of male and female percentages per age group so the reader must find the maximum female value themselves.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type (population pyramid) and title",
+          "Vertical axis label 'Age group' and all seven age group categories in order",
+          "Horizontal axis label 'Population (%)' and tick marks 8, 4, 0, 4, 8",
+          "Male bars blue extending left, female bars pink extending right from 0",
+          "All printed male and female percentage values for each age group",
+          "Legend position and contents, and that it partly covers the female 0–9 label"
+        ],
+        "left_for_student": "Compare the female percentages across all age groups to identify which age group has the largest value."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Population pyramid titled 'Population Pyramid, Country X.' Horizontal bars show seven age groups on the vertical axis, labeled 'Age group.' Male bars, in blue, extend left from a center line at 0. Female bars, in pink, extend right. The horizontal axis, labeled 'Population (%)', is marked 8, 4, 0, 4, 8. Each bar is labeled with its value. From the top row to the bottom: 60+: male 3.0, female 3.9. 50–59: male 3.8, female 4.1. 40–49: male 4.9, female 5.0. 30–39: male 6.0, female 6.3. 20–29: male 6.8, female 7.2. 10–19: male 5.6, female 5.4. 0–9: male 5.1, female 4.9. The female 0–9 label is partly covered by a legend in the lower right that reads Male (blue) and Female (pink).",
+          "student_b": {
+            "answer": "20–29",
+            "reasoning": "The description gives these female percentages: 60+ is 3.9, 50–59 is 4.1, 40–49 is 5.0, 30–39 is 6.3, 20–29 is 7.2, 10–19 is 5.4, and 0–9 is 4.9. The highest is 7.2, for the 20–29 group. The 0–9 label is said to be partly covered by the legend, but its value of 4.9 is still given, and it is well below 7.2.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students answered 20–29. The description lists every female value without saying which is largest, so Student B had to compare them, just as Student A did from the image.",
+            "evidence": "The text '20–29' appears only as a row label that the sighted student also sees (e.g., '20–29: male 6.8, female 7.2'). No conclusion like 'largest' or 'highest' is stated.",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Population pyramid titled 'Population Pyramid, Country X.' Horizontal bars show seven age groups on the vertical axis, labeled 'Age group.' Male bars, in blue, extend left from a center line at 0. Female bars, in pink, extend right. The horizontal axis, labeled 'Population (%)', is marked 8, 4, 0, 4, 8. Each bar is labeled with its value. From the top row to the bottom: 60+: male 3.0, female 3.9. 50–59: male 3.8, female 4.1. 40–49: male 4.9, female 5.0. 30–39: male 6.0, female 6.3. 20–29: male 6.8, female 7.2. 10–19: male 5.6, female 5.4. 0–9: male 5.1, female 4.9. The female 0–9 label is partly covered by a legend in the lower right that reads Male (blue) and Female (pink).",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q13",
+      "subject": "Geometry",
+      "question": "What is the value of angle x, in degrees?",
+      "image": "images/q13_angle.png",
+      "answer": "70",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "70",
+        "reasoning": "The angles of a triangle add up to 180°. So x = 180° - 50° - 60° = 70°."
+      },
+      "plain": {
+        "alt_text": "Diagram of a triangle labeled 'not drawn to scale.' The bottom-left angle is marked 50°, the bottom-right angle is marked 60°, and the top angle is labeled x.",
+        "student_b": {
+          "answer": "70",
+          "reasoning": "The description gives a triangle whose bottom-left angle is 50° and bottom-right angle is 60°, with the top angle labeled x. The interior angles of a triangle sum to 180°, so x = 180 - 50 - 60 = 70°. The 'not drawn to scale' label doesn't matter because the angle measures are given explicitly.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students correctly found 70 by applying the triangle angle sum to the described 50° and 60° labels, and the description does not state the answer.",
+          "evidence": "",
+          "fix_hint": "",
+          "answer_found_in_text": false
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Title: Triangle (not drawn to scale)",
+          "Shape: triangle with a horizontal base and the top vertex left of center",
+          "Bottom-left interior angle labeled 50°",
+          "Bottom-right interior angle labeled 60°",
+          "Top interior angle labeled x"
+        ],
+        "left_for_student": "Use the angle sum of a triangle to find the value of angle x in degrees."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "A triangle with the title \"Triangle (not drawn to scale)\". The triangle has a horizontal base, with one vertex at the bottom left, one at the bottom right, and one at the top, positioned left of center. The interior angle at the bottom-left vertex is labeled 50°. The interior angle at the bottom-right vertex is labeled 60°. The interior angle at the top vertex is labeled x.",
+          "student_b": {
+            "answer": "70",
+            "reasoning": "The description gives the interior angles at the bottom-left (50°) and bottom-right (60°) vertices, and x is the third interior angle at the top. The interior angles of a triangle add up to 180°, so x = 180 - 50 - 60 = 70°. The 'not drawn to scale' note doesn't matter because the result uses only the labeled values.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students reach 70; the description gives only the labeled angles 50° and 60° plus the unknown x, so Student B still had to apply the triangle angle sum to find the answer.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "A triangle with the title \"Triangle (not drawn to scale)\". The triangle has a horizontal base, with one vertex at the bottom left, one at the bottom right, and one at the top, positioned left of center. The interior angle at the bottom-left vertex is labeled 50°. The interior angle at the bottom-right vertex is labeled 60°. The interior angle at the top vertex is labeled x.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q14",
+      "subject": "Geography",
+      "question": "In which compass direction does the Silver River flow?",
+      "image": "images/q14_river.png",
+      "answer": "southeast",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "Southeast",
+        "reasoning": "1) The north arrow points up, so down is south, right is east, and left is west. 2) The river's source is in the Granite Mountains in the upper-left (northwest) of the map. 3) Its mouth is at Lake Mira in the lower-right (southeast). 4) A river flows from its source to its mouth, so the Silver River flows from northwest to southeast."
+      },
+      "plain": {
+        "alt_text": "Map of the Silver River valley, with north pointing up. The Silver River rises at its source in the Granite Mountains in the northwest and winds southeast across a green valley to its mouth at Lake Mira in the southeast.",
+        "student_b": {
+          "answer": "Southeast",
+          "reasoning": "The description says the river rises at its source in the Granite Mountains in the northwest and winds southeast to its mouth at Lake Mira in the southeast. Rivers flow from source to mouth, and north is up on the map, so the river flows from northwest to southeast.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly says the river 'winds southeast', which is the flow direction the question asks for, so Student B could copy it instead of working it out from the source and mouth positions as Student A did.",
+          "evidence": "winds southeast across a green valley",
+          "fix_hint": "Remove the flow direction ('winds southeast') and describe only where things are: e.g., 'The Silver River's source is in the Granite Mountains in the upper-left of the map; it winds across a green valley to its mouth at Lake Mira in the lower-right.' Keep the north-up orientation.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Map title",
+          "North arrow pointing to the top of the map",
+          "Granite Mountains in the top left corner",
+          "Source label near the mountains in the top left",
+          "Silver River drawn as a line from top left to bottom right, zigzagging slightly",
+          "Lake Mira, labeled as the mouth, in the bottom right corner"
+        ],
+        "left_for_student": "Use the north arrow and the positions of the source and mouth to work out the compass direction in which the river flows."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Map titled 'Map of the Silver River valley.' A north arrow labeled N in the top right corner points straight up toward the top of the map. In the top left corner are three brown triangle mountain symbols labeled 'Granite Mountains.' Just below them, a point on the river is labeled 'Source.' A blue line labeled 'Silver River' runs from this source, zigzagging slightly, across the map to the bottom right corner. There it ends at a blue oval labeled 'Lake Mira (mouth).'",
+          "student_b": {
+            "answer": "Southeast",
+            "reasoning": "The north arrow points straight up, so the top of the map is north, the bottom is south, the right is east, and the left is west. Rivers flow from their source to their mouth. The source is in the top left (northwest), below the Granite Mountains. The mouth, Lake Mira, is in the bottom right (southeast). So the Silver River flows from northwest to southeast, meaning it flows southeast. The slight zigzags do not change the overall direction.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students answered southeast. The description gives only the north arrow orientation and the source and mouth positions (top left, bottom right), so Student B had to work out the compass direction just as Student A did.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Map titled 'Map of the Silver River valley.' A north arrow labeled N in the top right corner points straight up toward the top of the map. In the top left corner are three brown triangle mountain symbols labeled 'Granite Mountains.' Just below them, a point on the river is labeled 'Source.' A blue line labeled 'Silver River' runs from this source, zigzagging slightly, across the map to the bottom right corner. There it ends at a blue oval labeled 'Lake Mira (mouth).'",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q15",
+      "subject": "History",
+      "question": "How many years passed between the school being built and the bridge opening?",
+      "image": "images/q15_timeline.png",
+      "answer": "33",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "33",
+        "reasoning": "The timeline shows the school was built in 1838 and the bridge opened in 1871. Subtracting gives 1871 - 1838 = 33 years."
+      },
+      "plain": {
+        "alt_text": "Timeline titled 'History of Millbrook' showing four events in order: Town founded in 1820, School built in 1838, Railway arrives in 1855, and Bridge opens in 1871.",
+        "student_b": {
+          "answer": "33 years",
+          "reasoning": "The description says the school was built in 1838 and the bridge opened in 1871. 1871 - 1838 = 33 years.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students correctly answered 33, and Student B had to subtract the two years given in the description, just as Student A did from the image.",
+          "evidence": "",
+          "fix_hint": "",
+          "answer_found_in_text": false
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Image type: horizontal timeline",
+          "Title: History of Millbrook",
+          "Four events marked with red dots, in left-to-right order",
+          "Label placement alternating above and below the line",
+          "Town founded, 1820",
+          "School built, 1838",
+          "Railway arrives, 1855",
+          "Bridge opens, 1871"
+        ],
+        "left_for_student": "Subtract the year the school was built from the year the bridge opened to find how many years passed between the two events."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Timeline titled \"History of Millbrook.\" A horizontal line runs left to right with four red dots marking events in order. Labels alternate above and below the line. First, above: Town founded, 1820. Second, below: School built, 1838. Third, above: Railway arrives, 1855. Fourth, below: Bridge opens, 1871.",
+          "student_b": {
+            "answer": "33 years",
+            "reasoning": "The description says the school was built in 1838 and the bridge opened in 1871. Subtracting gives 1871 - 1838 = 33 years.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students answered 33. Student B had to subtract the school year from the bridge year using the labeled dates, which are the same labels Student A read on the timeline.",
+            "evidence": "School built, 1838 ... Bridge opens, 1871 (printed labels; the 33-year difference is never stated)",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Timeline titled \"History of Millbrook.\" A horizontal line runs left to right with four red dots marking events in order. Labels alternate above and below the line. First, above: Town founded, 1820. Second, below: School built, 1838. Third, above: Railway arrives, 1855. Fourth, below: Bridge opens, 1871.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    }
+  ]
+}

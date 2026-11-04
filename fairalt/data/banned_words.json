@@ -1,0 +1,12 @@
+{
+  "All": ["the answer is", "therefore", "which means"],
+  "Graphs": ["slope of", "gradient of", "trend", "correlation", "correlated", "increasing", "decreasing",
+             "increased", "decreased", "rises steadily", "falls steadily", "equilibrium"],
+  "Charts": ["highest", "lowest", "largest", "smallest", "biggest", "longest", "shortest", "maximum",
+             "minimum", "peak", "peaks", "the most", "the least", "majority", "combined", "in total", "a total of"],
+  "Diagrams": ["net force", "resultant", "total resistance", "equivalent resistance", "image distance",
+               "image forms", "image is formed"],
+  "Geometry": ["missing angle is", "remaining angle", "add up to", "adds up to", "sum of the angles"],
+  "Maps & timelines": ["southeast", "south-east", "northeast", "north-east", "southwest", "south-west",
+                       "northwest", "north-west", "years later", "years after", "years apart", "years between"]
+}

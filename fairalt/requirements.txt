@@ -1,0 +1,7 @@
+streamlit>=1.45
+anthropic>=2.3
+openai>=1.40
+python-dotenv>=1.0
+gTTS>=2.5
+matplotlib>=3.7
+pytest>=8.0

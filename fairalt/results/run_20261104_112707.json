@@ -1,0 +1,545 @@
+{
+  "run_id": "20261104_112707",
+  "created_at": "2026-11-04T11:27:07",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "usage": {},
+  "duration_s": 0,
+  "items": [
+    {
+      "id": "q01",
+      "subject": "Algebra",
+      "type": "Graphs",
+      "question": "What is the slope of the line shown in the graph?",
+      "image": "images/q01_slope.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "2",
+        "reasoning": "The line passes through the labeled points (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2.",
+        "facts_used": [
+          "point (0, 1)",
+          "point (3, 7)"
+        ]
+      },
+      "plain": {
+        "alt_text": "Graph of a straight line with positive slope on a coordinate grid, x from −1 to 5 and y from −1 to 9. The line passes through the labeled points (0, 1), its y-intercept, and (3, 7), giving a slope of 2 (y = 2x + 1). It crosses the x-axis at x = −0.5.",
+        "student_b": {
+          "answer": "2",
+          "reasoning": "The description says the line passes through (0, 1) and (3, 7). Slope = (7 − 1)/(3 − 0) = 6/3 = 2. The description also states the slope directly as 2, with equation y = 2x + 1.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "student_b_runs": [
+          {
+            "answer": "2",
+            "reasoning": "The description says the line passes through (0, 1) and (3, 7). Slope = (7 − 1)/(3 − 0) = 6/3 = 2. The description also states the slope directly as 2, with equation y = 2x + 1.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "2",
+            "reasoning": "The description says the line passes through the labeled points (0, 1) and (3, 7). The slope is (7 − 1) / (3 − 0) = 6 / 3 = 2. This matches the stated slope of 2 and the equation y = 2x + 1.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "2",
+            "reasoning": "The line passes through the labeled points (0, 1) and (3, 7). Slope = (7 − 1) / (3 − 0) = 6/3 = 2. This matches the description's stated slope of 2 and equation y = 2x + 1. The x-intercept of −0.5 is also consistent, since 0 = 2x + 1 gives x = −0.5.",
+            "answer_given_in_description": true,
+            "missing": ""
+          }
+        ],
+        "verdict": {
+          "status": "RED",
+          "reason": "The description states the slope directly as 2 and gives the equation y = 2x + 1, so Student B did not need to compute the answer from the plotted points.",
+          "quote": "giving a slope of 2 (y = 2x + 1)",
+          "evidence": "giving a slope of 2 (y = 2x + 1)",
+          "fix_hint": "Remove 'giving a slope of 2 (y = 2x + 1)' and the derived x-intercept. Keep only the visible details: the grid ranges, the positive-slope line, and the labeled points (0, 1) and (3, 7).",
+          "answer_found_in_text": true,
+          "judge_status": "RED",
+          "quote_ok": true,
+          "problems": [
+            "Uses \"slope of\", which gives the answer away for Graphs questions.",
+            "Gives the answer away: \"giving a slope of 2 (y = 2x + 1)\"."
+          ],
+          "unsure": [],
+          "checks": {
+            "students_correct": true,
+            "no_answer": false,
+            "no_banned": false,
+            "no_missing": true,
+            "consistent": true
+          },
+          "b_correct": 3,
+          "runs": 3,
+          "banned": [
+            "slope of"
+          ],
+          "missing": []
+        }
+      },
+      "facts": {
+        "kept": [
+          {
+            "fact": "The image is a graph of a straight line on a coordinate grid",
+            "source": "drawn"
+          },
+          {
+            "fact": "The graph has no title",
+            "source": "drawn"
+          },
+          {
+            "fact": "The horizontal axis is labelled x",
+            "source": "printed"
+          },
+          {
+            "fact": "The vertical axis is labelled y",
+            "source": "printed"
+          },
+          {
+            "fact": "The x-axis runs from -1 to 5",
+            "source": "printed"
+          },
+          {
+            "fact": "The x-axis tick labels are -1, 0, 1, 2, 3, 4, 5, in steps of 1",
+            "source": "printed"
+          },
+          {
+            "fact": "The y-axis runs from -1 to 9",
+            "source": "printed"
+          },
+          {
+            "fact": "The y-axis tick labels are -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, in steps of 1",
+            "source": "printed"
+          },
+          {
+            "fact": "Light grid lines are drawn at every whole number on both axes",
+            "source": "drawn"
+          },
+          {
+            "fact": "The x-axis and y-axis are drawn as dark lines crossing at the origin (0, 0)",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line is blue",
+            "source": "drawn"
+          },
+          {
+            "fact": "A black dot marks a point labelled (0, 1)",
+            "source": "printed"
+          },
+          {
+            "fact": "The point (0, 1) lies on the y-axis",
+            "source": "drawn"
+          },
+          {
+            "fact": "A black dot marks a point labelled (3, 7)",
+            "source": "printed"
+          },
+          {
+            "fact": "The line passes through both marked points",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line rises from left to right",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line starts at the bottom-left corner near (-1, -1)",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line leaves the top of the graph near (4, 9)",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line crosses the x-axis at about x = -0.5",
+            "source": "drawn"
+          }
+        ],
+        "removed": [
+          {
+            "fact": "The y-intercept of the line is 1",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Between the marked points, y increases by 6 while x increases by 3",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The slope of the line is 2",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The equation of the line is y = 2x + 1",
+            "why": "worked out, not visible in the image"
+          }
+        ]
+      },
+      "writer_notes": {
+        "details_included": [
+          "Graph of a straight line on a coordinate grid",
+          "No title",
+          "Horizontal axis labelled x, from -1 to 5, tick labels in steps of 1",
+          "Vertical axis labelled y, from -1 to 9, tick labels in steps of 1",
+          "Light grid lines at every whole number",
+          "Dark axes crossing at the origin (0, 0)",
+          "Line is blue",
+          "Black dot labelled (0, 1), on the y-axis",
+          "Black dot labelled (3, 7)",
+          "Line passes through both marked points",
+          "Line rises from left to right",
+          "Line starts at the bottom-left corner near (-1, -1)",
+          "Line crosses the x-axis at about x = -0.5",
+          "Line leaves the top of the graph near (4, 9)"
+        ],
+        "left_for_student": "Use the two marked points (0, 1) and (3, 7) to find the change in y and the change in x, then divide to calculate the slope of the line."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "A graph of a straight blue line on a coordinate grid, with no title. The horizontal x-axis runs from -1 to 5, and the vertical y-axis runs from -1 to 9. Both axes are labelled in steps of 1, with light grid lines at every whole number. The axes are dark lines crossing at the origin (0, 0). Two points on the line are marked with black dots and labelled: (0, 1), which lies on the y-axis, and (3, 7). The line rises from left to right. It starts at the bottom-left corner near (-1, -1), crosses the x-axis at about x = -0.5, and leaves the top of the graph near (4, 9).",
+          "student_b": {
+            "answer": "2",
+            "reasoning": "The description gives two labelled points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. The other details agree with this: a slope of 2 through (0, 1) passes through (-1, -1), crosses the x-axis at x = -0.5, and reaches (4, 9).",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "student_b_runs": [
+            {
+              "answer": "2",
+              "reasoning": "The description gives two labelled points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. The other details agree with this: a slope of 2 through (0, 1) passes through (-1, -1), crosses the x-axis at x = -0.5, and reaches (4, 9).",
+              "answer_given_in_description": false,
+              "missing": ""
+            },
+            {
+              "answer": "2",
+              "reasoning": "The description gives two labelled points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. The other described features agree with this: the approximate points (-1, -1) and (4, 9), and the x-intercept at about -0.5, all fit y = 2x + 1.",
+              "answer_given_in_description": false,
+              "missing": ""
+            },
+            {
+              "answer": "2",
+              "reasoning": "The description gives two labelled points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. The other described features agree with this: y = 2x + 1 passes through (-1, -1), crosses the x-axis at x = -0.5, and reaches (4, 9).",
+              "answer_given_in_description": false,
+              "missing": ""
+            }
+          ],
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description gives the labelled points (0, 1) and (3, 7) that a sighted student also sees, and Student B had to compute the slope from them without the description ever stating it.",
+            "quote": "Two points on the line are marked with black dots and labelled: (0, 1), which lies on the y-axis, and (3, 7).",
+            "evidence": "Two points on the line are marked with black dots and labelled: (0, 1), which lies on the y-axis, and (3, 7).",
+            "fix_hint": "",
+            "answer_found_in_text": false,
+            "judge_status": "GREEN",
+            "quote_ok": true,
+            "problems": [],
+            "unsure": [],
+            "checks": {
+              "students_correct": true,
+              "no_answer": true,
+              "no_banned": true,
+              "no_missing": true,
+              "consistent": true
+            },
+            "b_correct": 3,
+            "runs": 3,
+            "banned": [],
+            "missing": []
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "A graph of a straight blue line on a coordinate grid, with no title. The horizontal x-axis runs from -1 to 5, and the vertical y-axis runs from -1 to 9. Both axes are labelled in steps of 1, with light grid lines at every whole number. The axes are dark lines crossing at the origin (0, 0). Two points on the line are marked with black dots and labelled: (0, 1), which lies on the y-axis, and (3, 7). The line rises from left to right. It starts at the bottom-left corner near (-1, -1), crosses the x-axis at about x = -0.5, and leaves the top of the graph near (4, 9).",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": true,
+        "approved_by": "sasmi",
+        "approved_at": "2026-11-04T11:28:37",
+        "edited_alt_text": null,
+        "seconds": 35,
+        "published": true,
+        "published_at": "2026-11-04T11:30:12",
+        "certificate_id": "FA-20261104_112707-Q01"
+      },
+      "seconds": 35.7,
+      "usage": {
+        "calls": 12,
+        "prompt_tokens": 7192,
+        "completion_tokens": 3731,
+        "est_cost_usd": 0.1034
+      }
+    },
+    {
+      "id": "q02",
+      "subject": "Statistics",
+      "question": "In which month did Riverton get the most rainfall?",
+      "image": "images/q02_bar.png",
+      "answer": "April",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q03",
+      "subject": "Statistics",
+      "question": "How did enrollment at Lakeside College change from 2015 to 2020?",
+      "image": "images/q03_trend.png",
+      "answer": "B",
+      "answer_type": "choice",
+      "options": [
+        "A) It decreased",
+        "B) It increased every year",
+        "C) It increased, then decreased",
+        "D) It stayed the same"
+      ],
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q04",
+      "subject": "Economics",
+      "question": "What percentage of the monthly budget goes to Food and Transport combined?",
+      "image": "images/q04_pie.png",
+      "answer": "35",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q05",
+      "subject": "Statistics",
+      "question": "How many students in Class 9B scored 80 or above?",
+      "image": "images/q05_hist.png",
+      "answer": "10",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q06",
+      "subject": "Biology",
+      "question": "Which letter labels the nucleus?",
+      "image": "images/q06_cell.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q07",
+      "subject": "Physics",
+      "question": "What is the current flowing in the circuit, in amperes?",
+      "image": "images/q07_circuit.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q08",
+      "subject": "Physics",
+      "question": "What is the size of the net force on the box, in newtons?",
+      "image": "images/q08_forces.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q09",
+      "subject": "Physics",
+      "question": "How far from the lens, in centimetres, is the image formed?",
+      "image": "images/q09_lens.png",
+      "answer": "15",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q10",
+      "subject": "Economics",
+      "question": "What is the equilibrium price in the market for notebooks, in dollars?",
+      "image": "images/q10_supply_demand.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q11",
+      "subject": "Statistics",
+      "question": "What type of correlation does the scatter plot show between hours studied and test score?",
+      "image": "images/q11_scatter.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A) Positive",
+        "B) Negative",
+        "C) No correlation"
+      ],
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q12",
+      "subject": "Geography",
+      "question": "In Country X, which age group has the largest percentage of females?",
+      "image": "images/q12_pyramid.png",
+      "answer": "20-29",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q13",
+      "subject": "Geometry",
+      "question": "What is the value of angle x, in degrees?",
+      "image": "images/q13_angle.png",
+      "answer": "70",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q14",
+      "subject": "Geography",
+      "question": "In which compass direction does the Silver River flow?",
+      "image": "images/q14_river.png",
+      "answer": "southeast",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q15",
+      "subject": "History",
+      "question": "How many years passed between the school being built and the bridge opening?",
+      "image": "images/q15_timeline.png",
+      "answer": "33",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    }
+  ]
+}

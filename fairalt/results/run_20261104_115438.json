@@ -1,0 +1,1581 @@
+{
+  "run_id": "20261104_115438",
+  "created_at": "2026-11-04T11:54:38",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "usage": {},
+  "duration_s": 0,
+  "items": [
+    {
+      "id": "q01",
+      "subject": "Algebra",
+      "type": "Graphs",
+      "question": "What is the slope of the line shown in the graph?",
+      "image": "images/q01_slope.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "2",
+        "reasoning": "The line passes through (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2.",
+        "facts_used": [
+          "point (0, 1)",
+          "point (3, 7)"
+        ]
+      },
+      "plain": {
+        "alt_text": "Graph of a straight line with positive slope on a coordinate grid, x from -1 to 5 and y from -1 to 9. The line passes through the labeled points (0, 1) and (3, 7), giving a slope of 2 and a y-intercept of 1, so the equation is y = 2x + 1. It crosses the x-axis at x = -0.5.",
+        "student_b": {
+          "answer": "2",
+          "reasoning": "The description says the line passes through the labeled points (0, 1) and (3, 7). Using the slope formula, (7 - 1) / (3 - 0) = 6 / 3 = 2. The description also states the slope as 2 and gives the equation y = 2x + 1, which agrees.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "student_b_runs": [
+          {
+            "answer": "2",
+            "reasoning": "The description says the line passes through the labeled points (0, 1) and (3, 7). Using the slope formula, (7 - 1) / (3 - 0) = 6 / 3 = 2. The description also states the slope as 2 and gives the equation y = 2x + 1, which agrees.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "2",
+            "reasoning": "The description says the line passes through the labeled points (0, 1) and (3, 7). Using slope = (7 - 1) / (3 - 0) = 6 / 3 = 2, which matches the slope of 2 stated in the description.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "2",
+            "reasoning": "The description says the line passes through the labeled points (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. This matches the slope of 2 stated in the description and the equation y = 2x + 1.",
+            "answer_given_in_description": true,
+            "missing": ""
+          }
+        ],
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly states the slope the question asks for, along with the full equation, so Student B could answer without reasoning from the points.",
+          "quote": "giving a slope of 2 and a y-intercept of 1, so the equation is y = 2x + 1",
+          "evidence": "giving a slope of 2 and a y-intercept of 1, so the equation is y = 2x + 1",
+          "fix_hint": "Remove the stated slope, y-intercept, and equation (and the derived x-intercept). Keep only the visible details: the axes ranges, the line, and the labeled points (0, 1) and (3, 7).",
+          "answer_found_in_text": true,
+          "judge_status": "RED",
+          "quote_ok": true,
+          "problems": [
+            "Uses \"slope of\", which gives the answer away for Graphs questions.",
+            "Gives the answer away: \"giving a slope of 2 and a y-intercept of 1, so the equation is y = 2x + 1\"."
+          ],
+          "unsure": [],
+          "checks": {
+            "students_correct": true,
+            "no_answer": false,
+            "no_banned": false,
+            "no_missing": true,
+            "consistent": true
+          },
+          "b_correct": 3,
+          "runs": 3,
+          "banned": [
+            "slope of"
+          ],
+          "missing": []
+        }
+      },
+      "facts": {
+        "kept": [
+          {
+            "fact": "The image is a coordinate graph showing a single straight line.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The graph has no title.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The horizontal axis is labelled x.",
+            "source": "printed"
+          },
+          {
+            "fact": "The vertical axis is labelled y.",
+            "source": "printed"
+          },
+          {
+            "fact": "The x-axis scale runs from -1 to 5.",
+            "source": "printed"
+          },
+          {
+            "fact": "The x-axis tick labels go up in steps of 1: -1, 0, 1, 2, 3, 4, 5.",
+            "source": "printed"
+          },
+          {
+            "fact": "The y-axis scale runs from -1 to 9.",
+            "source": "printed"
+          },
+          {
+            "fact": "The y-axis tick labels go up in steps of 1: -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.",
+            "source": "printed"
+          },
+          {
+            "fact": "Light grey grid lines are drawn at every whole number on both axes.",
+            "source": "drawn"
+          },
+          {
+            "fact": "Dark lines mark the x-axis at y = 0 and the y-axis at x = 0.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line is blue.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line rises from left to right.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line enters at the bottom-left corner near (-1, -1).",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line leaves at the top edge near (4, 9).",
+            "source": "drawn"
+          },
+          {
+            "fact": "A black dot is marked on the line on the y-axis.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The dot on the y-axis is labelled (0, 1).",
+            "source": "printed"
+          },
+          {
+            "fact": "A second black dot is marked on the line further up and to the right.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The second dot is labelled (3, 7).",
+            "source": "printed"
+          },
+          {
+            "fact": "The line crosses the x-axis between x = -1 and x = 0, at about x = -0.5.",
+            "source": "drawn"
+          }
+        ],
+        "removed": [
+          {
+            "fact": "The y-intercept of the line is 1.",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The x-intercept of the line is -0.5.",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "From (0, 1) to (3, 7), the line rises 6 units over a run of 3 units.",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The slope of the line is 2.",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The equation of the line is y = 2x + 1.",
+            "why": "worked out, not visible in the image"
+          }
+        ]
+      },
+      "writer_notes": {
+        "details_included": [
+          "Coordinate graph with a single straight line, no title",
+          "Horizontal axis labelled x, scale -1 to 5 in steps of 1",
+          "Vertical axis labelled y, scale -1 to 9 in steps of 1",
+          "Light grey grid lines at every whole number on both axes",
+          "Dark lines marking the x-axis and y-axis",
+          "Line is blue and rises from left to right",
+          "Line enters at the bottom-left corner near (-1, -1)",
+          "Line crosses the x-axis at about x = -0.5",
+          "Line leaves the top edge near (4, 9)",
+          "Black dot on the y-axis labelled (0, 1)",
+          "Second black dot further up and to the right labelled (3, 7)"
+        ],
+        "left_for_student": "The student must use the labelled points (0, 1) and (3, 7) to find the change in y and the change in x, then calculate the slope of the line."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Coordinate graph with no title, showing a single straight blue line. The horizontal x-axis runs from -1 to 5 and the vertical y-axis runs from -1 to 9, both labelled in steps of 1. Light grey grid lines are drawn at every whole number, and dark lines mark the axes. The line rises from left to right. It enters at the bottom-left corner near (-1, -1), crosses the x-axis at about x = -0.5, and leaves the top edge near (4, 9). Two black dots are marked on the line: one on the y-axis labelled (0, 1), and one further up and to the right labelled (3, 7).",
+          "student_b": {
+            "answer": "2",
+            "reasoning": "The description labels two points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. This fits the other details: the line passes near (-1, -1) and (4, 9), and crosses the x-axis at x = -0.5, all of which match y = 2x + 1.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "student_b_runs": [
+            {
+              "answer": "2",
+              "reasoning": "The description labels two points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. This fits the other details: the line passes near (-1, -1) and (4, 9), and crosses the x-axis at x = -0.5, all of which match y = 2x + 1.",
+              "answer_given_in_description": false,
+              "missing": ""
+            },
+            {
+              "answer": "2",
+              "reasoning": "The description gives two labelled points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6/3 = 2. This agrees with the other approximate details: the line passes near (-1, -1), crosses the x-axis at about x = -0.5, and passes near (4, 9), all of which fit y = 2x + 1.",
+              "answer_given_in_description": false,
+              "missing": ""
+            },
+            {
+              "answer": "2",
+              "reasoning": "The description labels two points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. This matches the other details given: the line passes near (-1, -1), crosses the x-axis at about x = -0.5, and reaches near (4, 9), all of which fit y = 2x + 1.",
+              "answer_given_in_description": false,
+              "missing": ""
+            }
+          ],
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description gives the same labelled points the sighted student used, without stating the slope, so Student B had to compute (7-1)/(3-0) = 2 just as Student A did.",
+            "quote": "one on the y-axis labelled (0, 1), and one further up and to the right labelled (3, 7)",
+            "evidence": "one on the y-axis labelled (0, 1), and one further up and to the right labelled (3, 7)",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": false,
+            "judge_status": "GREEN",
+            "quote_ok": true,
+            "problems": [],
+            "unsure": [],
+            "checks": {
+              "students_correct": true,
+              "no_answer": true,
+              "no_banned": true,
+              "no_missing": true,
+              "consistent": true
+            },
+            "b_correct": 3,
+            "runs": 3,
+            "banned": [],
+            "missing": []
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Coordinate graph with no title, showing a single straight blue line. The horizontal x-axis runs from -1 to 5 and the vertical y-axis runs from -1 to 9, both labelled in steps of 1. Light grey grid lines are drawn at every whole number, and dark lines mark the axes. The line rises from left to right. It enters at the bottom-left corner near (-1, -1), crosses the x-axis at about x = -0.5, and leaves the top edge near (4, 9). Two black dots are marked on the line: one on the y-axis labelled (0, 1), and one further up and to the right labelled (3, 7).",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      },
+      "seconds": 38.5,
+      "usage": {
+        "calls": 12,
+        "prompt_tokens": 7204,
+        "completion_tokens": 4037,
+        "est_cost_usd": 0.1096
+      }
+    },
+    {
+      "id": "q02",
+      "subject": "Statistics",
+      "type": "Charts",
+      "question": "In which month did Riverton get the most rainfall?",
+      "image": "images/q02_bar.png",
+      "answer": "April",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "April",
+        "reasoning": "Step 1: Read each bar's value: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55. Step 2: Compare the values. 94 is the largest, so April had the most rainfall.",
+        "facts_used": [
+          "January 62 mm",
+          "February 48 mm",
+          "March 71 mm",
+          "April 94 mm",
+          "May 83 mm",
+          "June 55 mm"
+        ]
+      },
+      "plain": {
+        "alt_text": "Bar chart titled 'Monthly Rainfall in Riverton' showing rainfall in millimeters from January to June: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55. Rainfall dips to its lowest in February, peaks in April, then declines through June.",
+        "student_b": {
+          "answer": "April",
+          "reasoning": "The description gives monthly rainfall values: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55 mm. The highest value is April at 94 mm. The description also states that rainfall peaks in April.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "student_b_runs": [
+          {
+            "answer": "April",
+            "reasoning": "The description gives monthly rainfall values: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55 mm. The highest value is April at 94 mm. The description also states that rainfall peaks in April.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "April",
+            "reasoning": "The description lists the monthly rainfall values: Jan 62, Feb 48, Mar 71, Apr 94, May 83 and Jun 55 mm. The highest is April at 94 mm. The description also says rainfall peaks in April.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "April",
+            "reasoning": "The description lists the monthly rainfall as Jan 62, Feb 48, Mar 71, Apr 94, May 83 and Jun 55 mm. The highest value is April at 94 mm. The description also says rainfall 'peaks in April'.",
+            "answer_given_in_description": true,
+            "missing": ""
+          }
+        ],
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly states that rainfall peaks in April, which is the conclusion the question asks for, so Student B could answer without comparing the values.",
+          "quote": "peaks in April",
+          "evidence": "peaks in April",
+          "fix_hint": "Remove the trend summary sentence (or at least 'peaks in April') and keep only the title, axis units, and the per-month bar values, so the student must compare the numbers to find the maximum.",
+          "answer_found_in_text": true,
+          "judge_status": "RED",
+          "quote_ok": true,
+          "problems": [
+            "Uses \"lowest\", which gives the answer away for Charts questions.",
+            "Uses \"peaks\", which gives the answer away for Charts questions.",
+            "Gives the answer away: \"peaks in April\"."
+          ],
+          "unsure": [],
+          "checks": {
+            "students_correct": true,
+            "no_answer": false,
+            "no_banned": false,
+            "no_missing": true,
+            "consistent": true
+          },
+          "b_correct": 3,
+          "runs": 3,
+          "banned": [
+            "lowest",
+            "peaks"
+          ],
+          "missing": []
+        }
+      },
+      "facts": {
+        "kept": [
+          {
+            "fact": "Image type: vertical bar chart",
+            "source": "drawn"
+          },
+          {
+            "fact": "Title: Monthly Rainfall in Riverton",
+            "source": "printed"
+          },
+          {
+            "fact": "Y-axis label: Rainfall (mm)",
+            "source": "printed"
+          },
+          {
+            "fact": "Y-axis scale runs from 0 to 100",
+            "source": "printed"
+          },
+          {
+            "fact": "Y-axis tick labels: 0, 20, 40, 60, 80, 100",
+            "source": "printed"
+          },
+          {
+            "fact": "Y-axis extends slightly above 100 to about 110",
+            "source": "drawn"
+          },
+          {
+            "fact": "X-axis has no axis title",
+            "source": "drawn"
+          },
+          {
+            "fact": "X-axis category labels in order: Jan, Feb, Mar, Apr, May, Jun",
+            "source": "printed"
+          },
+          {
+            "fact": "There are 6 bars, one per month",
+            "source": "drawn"
+          },
+          {
+            "fact": "All bars are the same green colour",
+            "source": "drawn"
+          },
+          {
+            "fact": "Each bar has its value printed above it",
+            "source": "printed"
+          },
+          {
+            "fact": "Jan bar value: 62",
+            "source": "printed"
+          },
+          {
+            "fact": "Feb bar value: 48",
+            "source": "printed"
+          },
+          {
+            "fact": "Mar bar value: 71",
+            "source": "printed"
+          },
+          {
+            "fact": "Apr bar value: 94",
+            "source": "printed"
+          },
+          {
+            "fact": "May bar value: 83",
+            "source": "printed"
+          },
+          {
+            "fact": "Jun bar value: 55",
+            "source": "printed"
+          },
+          {
+            "fact": "Apr bar is the tallest bar",
+            "source": "drawn"
+          }
+        ],
+        "removed": [
+          {
+            "fact": "Y-axis ticks are at intervals of 20",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Feb bar is the shortest bar",
+            "why": "uses \"shortest\""
+          },
+          {
+            "fact": "Largest rainfall is 94 mm in Apr",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Smallest rainfall is 48 mm in Feb",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Rainfall falls from Jan to Feb, rises from Feb to Apr, then falls from Apr to Jun",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Total rainfall Jan to Jun is 413 mm",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Difference between largest and smallest values is 46 mm",
+            "why": "worked out, not visible in the image"
+          }
+        ]
+      },
+      "writer_notes": {
+        "details_included": [
+          "Image type: vertical bar chart",
+          "Title: Monthly Rainfall in Riverton",
+          "Y-axis label: Rainfall (mm)",
+          "Y-axis scale 0 to 100 with ticks every 20, extending slightly above 100",
+          "X-axis has no title",
+          "X-axis categories in order: Jan, Feb, Mar, Apr, May, Jun",
+          "6 bars, one per month, all the same green colour",
+          "Values printed above each bar",
+          "Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55"
+        ],
+        "left_for_student": "The student must compare the 6 monthly values to find which month had the most rainfall. The fact 'Apr bar is the tallest bar' was left out because it states the answer directly."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Vertical bar chart titled Monthly Rainfall in Riverton. It has 6 green bars, one for each month from January to June, with each bar's value printed above it. The vertical axis is labelled Rainfall (mm) and runs from 0 to 100 in steps of 20, extending slightly above 100. The horizontal axis shows the months and has no title. The values are: Jan, 62. Feb, 48. Mar, 71. Apr, 94. May, 83. Jun, 55.",
+          "student_b": {
+            "answer": "April",
+            "reasoning": "The description lists the rainfall values as Jan 62, Feb 48, Mar 71, Apr 94, May 83 and Jun 55 mm. The largest of these is 94 mm, which belongs to April.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "student_b_runs": [
+            {
+              "answer": "April",
+              "reasoning": "The description lists the rainfall values as Jan 62, Feb 48, Mar 71, Apr 94, May 83 and Jun 55 mm. The largest of these is 94 mm, which belongs to April.",
+              "answer_given_in_description": true,
+              "missing": ""
+            },
+            {
+              "answer": "April",
+              "reasoning": "The description lists the monthly rainfall values: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55 (mm). The largest of these is 94, which belongs to April.",
+              "answer_given_in_description": true,
+              "missing": ""
+            },
+            {
+              "answer": "April",
+              "reasoning": "The description gives the monthly rainfall values: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55 (mm). The largest of these is 94 mm, in April.",
+              "answer_given_in_description": true,
+              "missing": ""
+            }
+          ],
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description gives only the printed bar values, which Student A also read, and Student B had to compare them to find that April's 94 mm is the largest; no conclusion is stated.",
+            "quote": "The values are: Jan, 62. Feb, 48. Mar, 71. Apr, 94. May, 83. Jun, 55.",
+            "evidence": "The values are: Jan, 62. Feb, 48. Mar, 71. Apr, 94. May, 83. Jun, 55.",
+            "fix_hint": "No change needed. Keep listing the printed values without stating which bar is highest.",
+            "answer_found_in_text": false,
+            "judge_status": "GREEN",
+            "quote_ok": true,
+            "problems": [],
+            "unsure": [],
+            "checks": {
+              "students_correct": true,
+              "no_answer": true,
+              "no_banned": true,
+              "no_missing": true,
+              "consistent": true
+            },
+            "b_correct": 3,
+            "runs": 3,
+            "banned": [],
+            "missing": []
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Vertical bar chart titled Monthly Rainfall in Riverton. It has 6 green bars, one for each month from January to June, with each bar's value printed above it. The vertical axis is labelled Rainfall (mm) and runs from 0 to 100 in steps of 20, extending slightly above 100. The horizontal axis shows the months and has no title. The values are: Jan, 62. Feb, 48. Mar, 71. Apr, 94. May, 83. Jun, 55.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      },
+      "seconds": 29.2,
+      "usage": {
+        "calls": 12,
+        "prompt_tokens": 6760,
+        "completion_tokens": 3031,
+        "est_cost_usd": 0.0877
+      }
+    },
+    {
+      "id": "q03",
+      "subject": "Statistics",
+      "type": "Graphs",
+      "question": "How did enrollment at Lakeside College change from 2015 to 2020?",
+      "image": "images/q03_trend.png",
+      "answer": "B",
+      "answer_type": "choice",
+      "options": [
+        "A) It decreased",
+        "B) It increased every year",
+        "C) It increased, then decreased",
+        "D) It stayed the same"
+      ],
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "B",
+        "reasoning": "Reading the chart year by year, each value is higher than the one before: 1200 to 1260 to 1310 to 1395 to 1440 to 1520. Enrollment never drops or stays flat, so it increased every year.",
+        "facts_used": [
+          "2015 1200 students",
+          "2016 1260 students",
+          "2017 1310 students",
+          "2018 1395 students",
+          "2019 1440 students",
+          "2020 1520 students"
+        ]
+      },
+      "plain": {
+        "alt_text": "Line chart titled Lakeside College Enrollment showing student numbers rising steadily from 2015 to 2020: 1,200 in 2015, 1,260 in 2016, 1,310 in 2017, 1,395 in 2018, 1,440 in 2019, and 1,520 in 2020, an overall increase of 320 students.",
+        "student_b": {
+          "answer": "B",
+          "reasoning": "The description lists enrollment for each year: 1,200 (2015), 1,260 (2016), 1,310 (2017), 1,395 (2018), 1,440 (2019), 1,520 (2020). Each value is higher than the one before it, so enrollment increased every year, for an overall rise of 320 students.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "student_b_runs": [
+          {
+            "answer": "B",
+            "reasoning": "The description lists enrollment for each year: 1,200 (2015), 1,260 (2016), 1,310 (2017), 1,395 (2018), 1,440 (2019), 1,520 (2020). Each value is higher than the one before it, so enrollment increased every year, for an overall rise of 320 students.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "B",
+            "reasoning": "The description gives enrollment for each year: 1,200 (2015), 1,260 (2016), 1,310 (2017), 1,395 (2018), 1,440 (2019), and 1,520 (2020). Each value is higher than the one before, so enrollment increased every year, for a total rise of 320 students.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "B",
+            "reasoning": "The description gives enrollment for each year: 1,200 (2015), 1,260 (2016), 1,310 (2017), 1,395 (2018), 1,440 (2019) and 1,520 (2020). Every value is higher than the one before, so enrollment increased every year, for a total rise of 320 students.",
+            "answer_given_in_description": true,
+            "missing": ""
+          }
+        ],
+        "verdict": {
+          "status": "RED",
+          "reason": "The description says enrollment was 'rising steadily from 2015 to 2020', which states the trend the question asks for, so Student B could pick B without comparing the yearly values.",
+          "quote": "showing student numbers rising steadily from 2015 to 2020",
+          "evidence": "showing student numbers rising steadily from 2015 to 2020",
+          "fix_hint": "Remove 'rising steadily' and 'an overall increase of 320 students'. Keep only the title and the year-by-year values (1,200 in 2015 … 1,520 in 2020) so the student must compare them to find the trend.",
+          "answer_found_in_text": false,
+          "judge_status": "RED",
+          "quote_ok": true,
+          "problems": [
+            "Gives the answer away: \"showing student numbers rising steadily from 2015 to 2020\"."
+          ],
+          "unsure": [],
+          "checks": {
+            "students_correct": true,
+            "no_answer": false,
+            "no_banned": true,
+            "no_missing": true,
+            "consistent": true
+          },
+          "b_correct": 3,
+          "runs": 3,
+          "banned": [],
+          "missing": []
+        }
+      },
+      "facts": {
+        "kept": [
+          {
+            "fact": "The image is a line graph with marked data points",
+            "source": "drawn"
+          },
+          {
+            "fact": "Title: Lakeside College Enrollment",
+            "source": "printed"
+          },
+          {
+            "fact": "Horizontal axis label: Year",
+            "source": "printed"
+          },
+          {
+            "fact": "Vertical axis label: Students",
+            "source": "printed"
+          },
+          {
+            "fact": "Horizontal axis tick labels: 2015, 2016, 2017, 2018, 2019, 2020",
+            "source": "printed"
+          },
+          {
+            "fact": "Vertical axis tick labels: 1100, 1200, 1300, 1400, 1500, 1600",
+            "source": "printed"
+          },
+          {
+            "fact": "Vertical axis starts at 1100, not 0",
+            "source": "printed"
+          },
+          {
+            "fact": "The line and points are purple",
+            "source": "drawn"
+          },
+          {
+            "fact": "Each data point has its value printed just above it",
+            "source": "drawn"
+          },
+          {
+            "fact": "2015 point labeled 1200",
+            "source": "printed"
+          },
+          {
+            "fact": "2016 point labeled 1260",
+            "source": "printed"
+          },
+          {
+            "fact": "2017 point labeled 1310",
+            "source": "printed"
+          },
+          {
+            "fact": "2018 point labeled 1395",
+            "source": "printed"
+          },
+          {
+            "fact": "2019 point labeled 1440",
+            "source": "printed"
+          },
+          {
+            "fact": "2020 point labeled 1520",
+            "source": "printed"
+          },
+          {
+            "fact": "The 6 points are joined by straight line segments",
+            "source": "drawn"
+          },
+          {
+            "fact": "The line rises from left to right across all years",
+            "source": "drawn"
+          }
+        ],
+        "removed": [
+          {
+            "fact": "Vertical axis ticks are spaced every 100 students",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Enrollment increased every year from 2015 to 2020",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Total increase from 2015 to 2020 is 320 students",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Percent increase from 2015 to 2020 is about 26.7%",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Yearly increases: 60, 50, 85, 45, 80 students",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Largest yearly increase was 85 students, from 2017 to 2018",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Smallest yearly increase was 45 students, from 2018 to 2019",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Average increase is 64 students per year",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Lowest enrollment was 1200 in 2015",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Highest enrollment was 1520 in 2020",
+            "why": "worked out, not visible in the image"
+          }
+        ]
+      },
+      "writer_notes": {
+        "details_included": [
+          "Graph type: line graph with marked data points",
+          "Title: Lakeside College Enrollment",
+          "Line and points are purple",
+          "Points joined by straight line segments",
+          "Line rises from left to right across all years",
+          "Horizontal axis label Year, ticks 2015 to 2020",
+          "Vertical axis label Students, ticks 1100 to 1600 in steps of 100",
+          "Vertical axis starts at 1100, not 0",
+          "Data values: 2015 1200, 2016 1260, 2017 1310, 2018 1395, 2019 1440, 2020 1520"
+        ],
+        "left_for_student": "The student must describe how enrollment changed from 2015 to 2020. This includes working out the total amount of change and any year-to-year changes from the listed values. The student should also consider that the vertical axis starting at 1100 can make the change look larger than it is."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Line graph titled Lakeside College Enrollment, with purple data points joined by straight line segments. The line rises from left to right across all years. The horizontal axis is labeled Year, with ticks for 2015 through 2020. The vertical axis is labeled Students, with ticks from 1100 to 1600 in steps of 100. The vertical axis starts at 1100, not 0. Each point has its value printed above it: 2015, 1200 students. 2016, 1260. 2017, 1310. 2018, 1395. 2019, 1440. 2020, 1520.",
+          "student_b": {
+            "answer": "B",
+            "reasoning": "The labeled values are 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), and 1520 (2020). Each value is higher than the one before, so enrollment increased every year. The description also says the line rises from left to right across all years.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "student_b_runs": [
+            {
+              "answer": "B",
+              "reasoning": "The labeled values are 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), and 1520 (2020). Each value is higher than the one before, so enrollment increased every year. The description also says the line rises from left to right across all years.",
+              "answer_given_in_description": true,
+              "missing": ""
+            },
+            {
+              "answer": "B",
+              "reasoning": "According to the description, the yearly values are 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), and 1520 (2020). Each value is higher than the one before it, so enrollment rose every year. The vertical axis starting at 1100 only affects how steep the line looks. It does not change the direction of the trend.",
+              "answer_given_in_description": true,
+              "missing": ""
+            },
+            {
+              "answer": "B",
+              "reasoning": "The printed values are 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019) and 1520 (2020). Each value is higher than the one before it, so enrollment increased every year. The description also says the line rises from left to right across all years. The vertical axis starting at 1100 makes the growth look steeper, but it does not change the direction.",
+              "answer_given_in_description": true,
+              "missing": ""
+            }
+          ],
+          "verdict": {
+            "status": "RED",
+            "reason": "The description states the overall trend outright, which is the conclusion the question asks for, so Student B could answer without comparing the year-by-year values.",
+            "quote": "The line rises from left to right across all years.",
+            "evidence": "The line rises from left to right across all years.",
+            "fix_hint": "Remove the sentence 'The line rises from left to right across all years.' Keep the axis details and the printed values for each year (1200, 1260, 1310, 1395, 1440, 1520) so the student must compare them to work out the trend.",
+            "answer_found_in_text": false,
+            "judge_status": "RED",
+            "quote_ok": true,
+            "problems": [
+              "Gives the answer away: \"The line rises from left to right across all years.\"."
+            ],
+            "unsure": [],
+            "checks": {
+              "students_correct": true,
+              "no_answer": false,
+              "no_banned": true,
+              "no_missing": true,
+              "consistent": true
+            },
+            "b_correct": 3,
+            "runs": 3,
+            "banned": [],
+            "missing": []
+          },
+          "what_changed": null
+        },
+        {
+          "attempt": 2,
+          "alt_text": "Line graph titled Lakeside College Enrollment, with 6 purple data points joined by straight line segments. The horizontal axis is labeled Year, with ticks for 2015 through 2020. The vertical axis is labeled Students, with ticks from 1100 to 1600 in steps of 100. The vertical axis starts at 1100, not 0. Each point has its value printed above it: 2015, 1200 students. 2016, 1260. 2017, 1310. 2018, 1395. 2019, 1440. 2020, 1520.",
+          "student_b": {
+            "answer": "B",
+            "reasoning": "The printed values are 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019) and 1520 (2020). Each value is higher than the one before it, so enrollment increased every year. The vertical axis starting at 1100 makes the changes look bigger on the graph, but it does not change their direction.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "student_b_runs": [
+            {
+              "answer": "B",
+              "reasoning": "The printed values are 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019) and 1520 (2020). Each value is higher than the one before it, so enrollment increased every year. The vertical axis starting at 1100 makes the changes look bigger on the graph, but it does not change their direction.",
+              "answer_given_in_description": true,
+              "missing": ""
+            },
+            {
+              "answer": "B",
+              "reasoning": "The description gives each year's value: 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), 1520 (2020). Each value is higher than the one before, so enrollment increased every year, rising by 320 students overall. The vertical axis starting at 1100 does not change these printed values.",
+              "answer_given_in_description": true,
+              "missing": ""
+            },
+            {
+              "answer": "B",
+              "reasoning": "The description gives each year's value: 1200, 1260, 1310, 1395, 1440, 1520. Every value is higher than the one before it, so enrollment increased every year from 2015 to 2020.",
+              "answer_given_in_description": true,
+              "missing": ""
+            }
+          ],
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description lists only the printed values that Student A also saw and never states the trend, so Student B had to compare consecutive years to conclude that enrollment increased every year.",
+            "quote": "2015, 1200 students. 2016, 1260. 2017, 1310. 2018, 1395. 2019, 1440. 2020, 1520.",
+            "evidence": "2015, 1200 students. 2016, 1260. 2017, 1310. 2018, 1395. 2019, 1440. 2020, 1520.",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": false,
+            "judge_status": "GREEN",
+            "quote_ok": true,
+            "problems": [],
+            "unsure": [],
+            "checks": {
+              "students_correct": true,
+              "no_answer": true,
+              "no_banned": true,
+              "no_missing": true,
+              "consistent": true
+            },
+            "b_correct": 3,
+            "runs": 3,
+            "banned": [],
+            "missing": []
+          },
+          "what_changed": "Removed the sentence stating that the line rises across all years, so the student must compare the printed year-by-year values to work out the trend, and noted that there are 6 data points."
+        }
+      ],
+      "final_alt_text": "Line graph titled Lakeside College Enrollment, with 6 purple data points joined by straight line segments. The horizontal axis is labeled Year, with ticks for 2015 through 2020. The vertical axis is labeled Students, with ticks from 1100 to 1600 in steps of 100. The vertical axis starts at 1100, not 0. Each point has its value printed above it: 2015, 1200 students. 2016, 1260. 2017, 1310. 2018, 1395. 2019, 1440. 2020, 1520.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      },
+      "seconds": 44.4,
+      "usage": {
+        "calls": 17,
+        "prompt_tokens": 11541,
+        "completion_tokens": 4549,
+        "est_cost_usd": 0.1371
+      }
+    },
+    {
+      "id": "q04",
+      "subject": "Economics",
+      "type": "Charts",
+      "question": "What percentage of the monthly budget goes to Food and Transport combined?",
+      "image": "images/q04_pie.png",
+      "answer": "35",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "35%",
+        "reasoning": "Step 1: Read the Food slice: 20%. Step 2: Read the Transport slice: 15%. Step 3: Add them: 20% + 15% = 35%.",
+        "facts_used": [
+          "Food 20%",
+          "Transport 15%"
+        ]
+      },
+      "plain": {
+        "alt_text": "Pie chart titled 'Monthly Household Budget' showing spending by category: Housing 35%, Food 20%, Other 20%, Transport 15%, and Savings 10%. Housing is the largest share.",
+        "student_b": {
+          "answer": "35%",
+          "reasoning": "The description lists Food at 20% and Transport at 15%. Adding them gives 20% + 15% = 35% of the monthly budget.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "student_b_runs": [
+          {
+            "answer": "35%",
+            "reasoning": "The description lists Food at 20% and Transport at 15%. Adding them gives 20% + 15% = 35% of the monthly budget.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          {
+            "answer": "35%",
+            "reasoning": "According to the description, Food is 20% and Transport is 15%. Combined: 20% + 15% = 35%.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          {
+            "answer": "35%",
+            "reasoning": "The description gives Food as 20% and Transport as 15%. Adding them gives 20% + 15% = 35%.",
+            "answer_given_in_description": false,
+            "missing": ""
+          }
+        ],
+        "verdict": {
+          "status": "RED",
+          "reason": "The '35%' in the description is Housing's own slice label, which the sighted student also sees, so Student B still had to add Food 20% and Transport 15% to reach 35, just as Student A did.",
+          "quote": "Food 20%, Other 20%, Transport 15%",
+          "evidence": "Food 20%, Other 20%, Transport 15%",
+          "fix_hint": "No change needed; the description gives each slice value without stating the combined Food and Transport total.",
+          "answer_found_in_text": true,
+          "judge_status": "GREEN",
+          "quote_ok": true,
+          "problems": [
+            "Uses \"largest\", which gives the answer away for Charts questions."
+          ],
+          "unsure": [],
+          "checks": {
+            "students_correct": true,
+            "no_answer": true,
+            "no_banned": false,
+            "no_missing": true,
+            "consistent": true
+          },
+          "b_correct": 3,
+          "runs": 3,
+          "banned": [
+            "largest"
+          ],
+          "missing": []
+        }
+      },
+      "facts": {
+        "kept": [
+          {
+            "fact": "The image is a pie chart",
+            "source": "drawn"
+          },
+          {
+            "fact": "Title: Monthly Household Budget",
+            "source": "printed"
+          },
+          {
+            "fact": "The chart has no axes, scales or legend; each slice is labelled directly beside it",
+            "source": "drawn"
+          },
+          {
+            "fact": "The chart has 5 slices",
+            "source": "drawn"
+          },
+          {
+            "fact": "Slice label: Housing 35%",
+            "source": "printed"
+          },
+          {
+            "fact": "Slice label: Food 20%",
+            "source": "printed"
+          },
+          {
+            "fact": "Slice label: Transport 15%",
+            "source": "printed"
+          },
+          {
+            "fact": "Slice label: Savings 10%",
+            "source": "printed"
+          },
+          {
+            "fact": "Slice label: Other 20%",
+            "source": "printed"
+          },
+          {
+            "fact": "The Housing slice is blue",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Food slice is orange",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Transport slice is green",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Savings slice is red",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Other slice is purple",
+            "source": "drawn"
+          },
+          {
+            "fact": "The slices start at the top of the circle and run clockwise in the order Housing, Food, Transport, Savings, Other",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Housing slice is on the right side of the circle, from the top to the lower right",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Food slice is at the bottom right of the circle",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Transport slice is at the bottom left of the circle",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Savings slice is on the left side of the circle",
+            "source": "drawn"
+          },
+          {
+            "fact": "The Other slice is at the upper left of the circle",
+            "source": "drawn"
+          }
+        ],
+        "removed": [
+          {
+            "fact": "Housing is the largest slice",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Savings is the smallest slice",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "Food and Other are the same size, both 20%",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The 5 percentages add up to 100%",
+            "why": "worked out, not visible in the image"
+          }
+        ]
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: pie chart",
+          "Title: Monthly Household Budget",
+          "5 slices, labelled directly, no axes, scales or legend",
+          "Housing 35%, blue, right side from top to lower right",
+          "Food 20%, orange, bottom right",
+          "Transport 15%, green, bottom left",
+          "Savings 10%, red, left side",
+          "Other 20%, purple, upper left",
+          "Slices run clockwise from the top in the order Housing, Food, Transport, Savings, Other"
+        ],
+        "left_for_student": "The student must find the Food (20%) and Transport (15%) slices and add their percentages to get the combined share of the monthly budget."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Pie chart titled Monthly Household Budget, divided into 5 slices. Each slice is labelled directly beside it, and there are no axes, scales or legend. Starting at the top of the circle and moving clockwise, the slices are: Housing 35%, blue, on the right side from the top to the lower right; Food 20%, orange, at the bottom right; Transport 15%, green, at the bottom left; Savings 10%, red, on the left side; and Other 20%, purple, at the upper left.",
+          "student_b": {
+            "answer": "35%",
+            "reasoning": "The description gives Food as 20% and Transport as 15%. Combined: 20% + 15% = 35%.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "student_b_runs": [
+            {
+              "answer": "35%",
+              "reasoning": "The description gives Food as 20% and Transport as 15%. Combined: 20% + 15% = 35%.",
+              "answer_given_in_description": true,
+              "missing": ""
+            },
+            {
+              "answer": "35%",
+              "reasoning": "The description labels Food as 20% and Transport as 15%. Adding them gives 20% + 15% = 35%. As a check, all five slices sum to 100% (35 + 20 + 15 + 10 + 20).",
+              "answer_given_in_description": false,
+              "missing": ""
+            },
+            {
+              "answer": "35%",
+              "reasoning": "The description labels Food as 20% and Transport as 15%. Adding them gives 20% + 15% = 35%.",
+              "answer_given_in_description": false,
+              "missing": ""
+            }
+          ],
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description gives only the individual printed slice labels, so Student B, like Student A, had to add Food 20% and Transport 15% to reach 35%; the '35%' in the text is the Housing label, not the answer.",
+            "quote": "Food 20%, orange, at the bottom right; Transport 15%, green, at the bottom left",
+            "evidence": "Food 20%, orange, at the bottom right; Transport 15%, green, at the bottom left",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": true,
+            "judge_status": "GREEN",
+            "quote_ok": true,
+            "problems": [],
+            "unsure": [],
+            "checks": {
+              "students_correct": true,
+              "no_answer": true,
+              "no_banned": true,
+              "no_missing": true,
+              "consistent": true
+            },
+            "b_correct": 3,
+            "runs": 3,
+            "banned": [],
+            "missing": []
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Pie chart titled Monthly Household Budget, divided into 5 slices. Each slice is labelled directly beside it, and there are no axes, scales or legend. Starting at the top of the circle and moving clockwise, the slices are: Housing 35%, blue, on the right side from the top to the lower right; Food 20%, orange, at the bottom right; Transport 15%, green, at the bottom left; Savings 10%, red, on the left side; and Other 20%, purple, at the upper left.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      },
+      "seconds": 30.2,
+      "usage": {
+        "calls": 12,
+        "prompt_tokens": 6553,
+        "completion_tokens": 2919,
+        "est_cost_usd": 0.0846
+      }
+    },
+    {
+      "id": "q05",
+      "subject": "Statistics",
+      "type": "Charts",
+      "question": "How many students in Class 9B scored 80 or above?",
+      "image": "images/q05_hist.png",
+      "answer": "10",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "10",
+        "reasoning": "Scores of 80 or above fall in the 80–89 and 90–100 bins. The 80–89 bar reaches 7 students and the 90–100 bar reaches 3 students. Adding them gives 7 + 3 = 10 students.",
+        "facts_used": [
+          "80–89: 7 students",
+          "90–100: 3 students"
+        ]
+      },
+      "plain": {
+        "alt_text": "Histogram titled 'Exam Scores, Class 9B' showing the number of students in each score range: 60–69 has 4 students, 70–79 has 9, 80–89 has 7, and 90–100 has 3. The most common range is 70–79, and 23 students are shown in total.",
+        "student_b": {
+          "answer": "10",
+          "reasoning": "Scores of 80 or above fall in the 80–89 range (7 students) and the 90–100 range (3 students). 7 + 3 = 10. As a check, all four ranges sum to 4 + 9 + 7 + 3 = 23, which matches the stated total.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "student_b_runs": [
+          {
+            "answer": "10",
+            "reasoning": "Scores of 80 or above fall in the 80–89 range (7 students) and the 90–100 range (3 students). 7 + 3 = 10. As a check, all four ranges sum to 4 + 9 + 7 + 3 = 23, which matches the stated total.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          {
+            "answer": "10",
+            "reasoning": "The description gives 7 students in the 80–89 range and 3 in the 90–100 range. Together these cover all scores of 80 or above, so 7 + 3 = 10. The bin counts (4 + 9 + 7 + 3 = 23) match the stated total of 23, so no students fall outside the listed ranges.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          {
+            "answer": "10",
+            "reasoning": "The 80–89 range has 7 students and the 90–100 range has 3 students, so 7 + 3 = 10 students scored 80 or above. As a check, 4 + 9 + 7 + 3 = 23, which matches the stated total.",
+            "answer_given_in_description": false,
+            "missing": ""
+          }
+        ],
+        "verdict": {
+          "status": "RED",
+          "reason": "The description gives the per-bin counts but not the combined total for scores of 80 or above, so Student B had to add the 80–89 and 90–100 bins, just as Student A did from the image.",
+          "quote": "80–89 has 7, and 90–100 has 3",
+          "evidence": "80–89 has 7, and 90–100 has 3",
+          "fix_hint": "No change needed.",
+          "answer_found_in_text": false,
+          "judge_status": "GREEN",
+          "quote_ok": true,
+          "problems": [
+            "Uses \"the most\", which gives the answer away for Charts questions.",
+            "Uses \"in total\", which gives the answer away for Charts questions."
+          ],
+          "unsure": [],
+          "checks": {
+            "students_correct": true,
+            "no_answer": true,
+            "no_banned": false,
+            "no_missing": true,
+            "consistent": true
+          },
+          "b_correct": 3,
+          "runs": 3,
+          "banned": [
+            "the most",
+            "in total"
+          ],
+          "missing": []
+        }
+      },
+      "facts": {
+        "kept": [
+          {
+            "fact": "The image is a histogram (bar chart) with 4 adjacent bars and no gaps between them.",
+            "source": "drawn"
+          },
+          {
+            "fact": "Title: Exam Scores, Class 9B",
+            "source": "printed"
+          },
+          {
+            "fact": "Horizontal axis label: Score",
+            "source": "printed"
+          },
+          {
+            "fact": "Vertical axis label: Number of students",
+            "source": "printed"
+          },
+          {
+            "fact": "The vertical axis runs from 0 to 10 in steps of 1.",
+            "source": "printed"
+          },
+          {
+            "fact": "Light horizontal gridlines are drawn at each whole number on the vertical axis.",
+            "source": "drawn"
+          },
+          {
+            "fact": "Horizontal axis categories from left to right: 60–69, 70–79, 80–89, 90–100",
+            "source": "printed"
+          },
+          {
+            "fact": "All bars are orange with dark outlines.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The 60–69 bar reaches 4.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The 70–79 bar reaches 9.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The 80–89 bar reaches 7.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The 90–100 bar reaches 3.",
+            "source": "drawn"
+          },
+          {
+            "fact": "The bar heights are not printed as numbers on the bars.",
+            "source": "drawn"
+          }
+        ],
+        "removed": [
+          {
+            "fact": "The 70–79 bar is the tallest.",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The 90–100 bar is the shortest.",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The last category, 90–100, covers 11 scores, while each of the other categories covers 10.",
+            "why": "worked out, not visible in the image"
+          },
+          {
+            "fact": "The total number of students shown is 23.",
+            "why": "worked out, not visible in the image"
+          }
+        ]
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: histogram with 4 adjacent bars, no gaps",
+          "Title: Exam Scores, Class 9B",
+          "Horizontal axis label: Score",
+          "Vertical axis label: Number of students",
+          "Vertical axis scale: 0 to 10 in steps of 1",
+          "Light gridlines at each whole number",
+          "Bars are orange",
+          "Bar heights not printed on bars",
+          "Categories left to right: 60 to 69, 70 to 79, 80 to 89, 90 to 100",
+          "60 to 69 bar reaches 4",
+          "70 to 79 bar reaches 9",
+          "80 to 89 bar reaches 7",
+          "90 to 100 bar reaches 3"
+        ],
+        "left_for_student": "The student must identify which score ranges are 80 or above (80 to 89 and 90 to 100) and add the number of students in those bars to find the total."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Histogram titled Exam Scores, Class 9B, with 4 orange bars side by side and no gaps between them. The horizontal axis is labeled Score. The vertical axis is labeled Number of students and runs from 0 to 10 in steps of 1, with light gridlines at each whole number. The bar heights are not printed on the bars. From left to right: the 60 to 69 bar reaches 4. The 70 to 79 bar reaches 9. The 80 to 89 bar reaches 7. The 90 to 100 bar reaches 3.",
+          "student_b": {
+            "answer": "10",
+            "reasoning": "Scores of 80 or above fall in the 80 to 89 bar and the 90 to 100 bar. The description says the 80 to 89 bar reaches 7 and the 90 to 100 bar reaches 3, so 7 + 3 = 10 students.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "student_b_runs": [
+            {
+              "answer": "10",
+              "reasoning": "Scores of 80 or above fall in the 80 to 89 bar and the 90 to 100 bar. The description says the 80 to 89 bar reaches 7 and the 90 to 100 bar reaches 3, so 7 + 3 = 10 students.",
+              "answer_given_in_description": false,
+              "missing": ""
+            },
+            {
+              "answer": "10",
+              "reasoning": "Scores of 80 or above fall in the 80 to 89 bin (7 students) and the 90 to 100 bin (3 students). 7 + 3 = 10.",
+              "answer_given_in_description": false,
+              "missing": ""
+            },
+            {
+              "answer": "10",
+              "reasoning": "The description gives the bar heights: the 80 to 89 bar reaches 7 and the 90 to 100 bar reaches 3. Students scoring 80 or above are in these two bins, so 7 + 3 = 10.",
+              "answer_given_in_description": false,
+              "missing": ""
+            }
+          ],
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description gives only the individual bar heights, so Student B had to pick the two bins at 80 or above and add 7 + 3, just as Student A did. The '10' that appears is the axis maximum, which the sighted student also sees, so it is not a leak.",
+            "quote": "The 80 to 89 bar reaches 7. The 90 to 100 bar reaches 3.",
+            "evidence": "The 80 to 89 bar reaches 7. The 90 to 100 bar reaches 3.",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": true,
+            "judge_status": "GREEN",
+            "quote_ok": true,
+            "problems": [],
+            "unsure": [],
+            "checks": {
+              "students_correct": true,
+              "no_answer": true,
+              "no_banned": true,
+              "no_missing": true,
+              "consistent": true
+            },
+            "b_correct": 3,
+            "runs": 3,
+            "banned": [],
+            "missing": []
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Histogram titled Exam Scores, Class 9B, with 4 orange bars side by side and no gaps between them. The horizontal axis is labeled Score. The vertical axis is labeled Number of students and runs from 0 to 10 in steps of 1, with light gridlines at each whole number. The bar heights are not printed on the bars. From left to right: the 60 to 69 bar reaches 4. The 70 to 79 bar reaches 9. The 80 to 89 bar reaches 7. The 90 to 100 bar reaches 3.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      },
+      "seconds": 28.8,
+      "usage": {
+        "calls": 11,
+        "prompt_tokens": 6303,
+        "completion_tokens": 3224,
+        "est_cost_usd": 0.0897
+      }
+    },
+    {
+      "id": "q06",
+      "subject": "Biology",
+      "question": "Which letter labels the nucleus?",
+      "image": "images/q06_cell.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q07",
+      "subject": "Physics",
+      "question": "What is the current flowing in the circuit, in amperes?",
+      "image": "images/q07_circuit.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q08",
+      "subject": "Physics",
+      "question": "What is the size of the net force on the box, in newtons?",
+      "image": "images/q08_forces.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q09",
+      "subject": "Physics",
+      "question": "How far from the lens, in centimetres, is the image formed?",
+      "image": "images/q09_lens.png",
+      "answer": "15",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q10",
+      "subject": "Economics",
+      "question": "What is the equilibrium price in the market for notebooks, in dollars?",
+      "image": "images/q10_supply_demand.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q11",
+      "subject": "Statistics",
+      "question": "What type of correlation does the scatter plot show between hours studied and test score?",
+      "image": "images/q11_scatter.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A) Positive",
+        "B) Negative",
+        "C) No correlation"
+      ],
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q12",
+      "subject": "Geography",
+      "question": "In Country X, which age group has the largest percentage of females?",
+      "image": "images/q12_pyramid.png",
+      "answer": "20-29",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q13",
+      "subject": "Geometry",
+      "question": "What is the value of angle x, in degrees?",
+      "image": "images/q13_angle.png",
+      "answer": "70",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q14",
+      "subject": "Geography",
+      "question": "In which compass direction does the Silver River flow?",
+      "image": "images/q14_river.png",
+      "answer": "southeast",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q15",
+      "subject": "History",
+      "question": "How many years passed between the school being built and the bridge opening?",
+      "image": "images/q15_timeline.png",
+      "answer": "33",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    }
+  ]
+}

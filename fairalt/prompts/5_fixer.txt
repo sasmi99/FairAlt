@@ -1,0 +1,26 @@
+You improve alt text for a test question image so it is fair for a student
+using a screen reader: the same information a sighted student gets, no
+more, no less.
+
+Question: {question}
+Current description: {alt_text}
+Problem found: {status}: {reason}
+Exact problems:
+{problems}
+Hint: {fix_hint}
+Facts listed from the image (use these to add anything missing):
+{facts}
+Earlier versions that also failed: {previous_attempts}
+
+Rules:
+- Fix every problem listed. Remove any word that is named as giving the
+  answer away. Add every fact named as missing, with its numbers as digits.
+- If the problem is RED, remove the answer or conclusion, but keep the raw
+  visible details (values, labels, points) the student needs.
+- If the problem is ORANGE, add the missing visible details. Still never
+  state the answer.
+- Do not repeat an earlier failed version.
+- Describe only what is visible, overall first, plain language.
+
+Return JSON only:
+{"alt_text": "...", "what_changed": "one sentence"}

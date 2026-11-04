@@ -1,0 +1,161 @@
+{
+  "run_id": "20261102_131831",
+  "created_at": "2026-11-02T13:18:31",
+  "provider": "claude_code",
+  "model": "claude-opus-5-5",
+  "questions_file": "data/questions.json",
+  "max_attempts": 3,
+  "duration_s": 31.2,
+  "usage": {
+    "calls": 14,
+    "prompt_tokens": 18649,
+    "completion_tokens": 1996,
+    "est_cost_usd": 0.1145
+  },
+  "items": [
+    {
+      "id": "q01",
+      "subject": "Algebra",
+      "question": "What is the slope of the line shown in the graph?",
+      "image": "images/q01_slope.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "2",
+        "reasoning": "The line passes through (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2."
+      },
+      "plain": {
+        "alt_text": "Graph of a straight line on a grid with x from -1 to 5 and y from -1 to 9. The line rises from lower left to upper right, crossing the y-axis at the marked point (0, 1) and passing through the marked point (3, 7), giving a slope of 2 (y = 2x + 1). It crosses the x-axis at x = -0.5.",
+        "student_b": {
+          "answer": "2",
+          "reasoning": "The description gives two marked points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. This matches the slope of 2 and the equation y = 2x + 1 stated in the description. The stated x-intercept of -0.5 is also consistent, since 0 = 2x + 1 gives x = -0.5.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description explicitly states the slope and the line's equation, so Student B could read off the answer instead of computing it from the marked points.",
+          "evidence": "giving a slope of 2 (y = 2x + 1)",
+          "fix_hint": "Remove 'giving a slope of 2 (y = 2x + 1)' and keep only the visible details: the grid ranges, the line's direction, and the marked points (0, 1) and (3, 7).",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Type of image: straight-line graph on a coordinate grid",
+          "x-axis label and range: x, from -1 to 5 in steps of 1",
+          "y-axis label and range: y, from -1 to 9 in steps of 1",
+          "Grid lines at each whole number",
+          "The line rises from left to right and its visible extent across the graph",
+          "Labeled point (0, 1) on the y-axis",
+          "Labeled point (3, 7)"
+        ],
+        "left_for_student": "The student must use the two labeled points to calculate the slope of the line (change in y divided by change in x)."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Graph of a straight line on a coordinate grid. The x-axis is labeled x and runs from negative 1 to 5, marked in steps of 1. The y-axis is labeled y and runs from negative 1 to 9, marked in steps of 1. Light grid lines appear at each whole number. A solid straight line rises from left to right, starting at the lower left corner near the point negative 1, negative 1 and leaving the top of the graph at about x equals 4, y equals 9. Two points on the line are marked with black dots and labeled: the point 0, 1, which is on the y-axis, and the point 3, 7.",
+          "student_b": {
+            "answer": "2",
+            "reasoning": "The description names two labeled points on the line: (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. The other details about where the line enters and leaves the graph are only approximate, so I used the two labeled points.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students reached the correct slope of 2, and Student B had to compute it from the two labeled points in the description, just as Student A did from the image.",
+            "evidence": "",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Graph of a straight line on a coordinate grid. The x-axis is labeled x and runs from negative 1 to 5, marked in steps of 1. The y-axis is labeled y and runs from negative 1 to 9, marked in steps of 1. Light grid lines appear at each whole number. A solid straight line rises from left to right, starting at the lower left corner near the point negative 1, negative 1 and leaving the top of the graph at about x equals 4, y equals 9. Two points on the line are marked with black dots and labeled: the point 0, 1, which is on the y-axis, and the point 3, 7.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q04",
+      "subject": "Economics",
+      "question": "What percentage of the monthly budget goes to Food and Transport combined?",
+      "image": "images/q04_pie.png",
+      "answer": "35",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "35%",
+        "reasoning": "The chart shows Food at 20% and Transport at 15%. Adding them: 20% + 15% = 35%."
+      },
+      "plain": {
+        "alt_text": "Pie chart titled 'Monthly Household Budget' showing spending by category: Housing 35%, Food 20%, Other 20%, Transport 15%, and Savings 10%. Housing is the largest slice, and Savings is the smallest.",
+        "student_b": {
+          "answer": "35%",
+          "reasoning": "The description gives Food as 20% and Transport as 15%. Adding them gives 20% + 15% = 35%.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "Both students correctly summed Food (20%) and Transport (15%) to get 35%. The '35%' in the description is Housing's printed slice label, which the sighted student also sees, not the combined answer.",
+          "evidence": "Housing 35% (an innocent label match; Food 20% and Transport 15% still had to be added)",
+          "fix_hint": "No change needed.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: pie chart",
+          "Title: Monthly Household Budget",
+          "Number of slices: five",
+          "Housing 35%",
+          "Food 20%",
+          "Transport 15%",
+          "Savings 10%",
+          "Other 20%",
+          "Clockwise order of slices starting from the top"
+        ],
+        "left_for_student": "The student must identify the Food and Transport percentages and add them together to find the combined share of the budget."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Pie chart titled \"Monthly Household Budget,\" divided into five slices, each labeled with a category and percentage. Going clockwise from the top: Housing 35%, Food 20%, Transport 15%, Savings 10%, and Other 20%.",
+          "student_b": {
+            "answer": "35%",
+            "reasoning": "The description states Food is 20% and Transport is 15%. Adding them gives 20% + 15% = 35%.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students correctly reached 35% by adding Food (20%) and Transport (15%), and the '35%' in the description is the Housing label also printed on the chart, not a stated answer.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Pie chart titled \"Monthly Household Budget,\" divided into five slices, each labeled with a category and percentage. Going clockwise from the top: Housing 35%, Food 20%, Transport 15%, Savings 10%, and Other 20%.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    }
+  ]
+}

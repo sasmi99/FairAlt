@@ -1,0 +1,39 @@
+You check whether an image description is fair for a test question.
+
+Question: {question}
+{options_if_any}
+Correct answer: {correct_answer}
+Answer type: {answer_type} (number: equal values count as the same answer,
+units optional; short text: same meaning counts; choice: same option)
+Image description: {alt_text}
+Student A (saw the image): {student_a_json}
+Student B (heard only the description), {runs} separate tries: {student_b_json}
+Code checks: answer text found in description: {answer_found_in_text};
+Student B correct in {b_correct} of {runs} tries.
+
+Decide ONE status:
+- INVALID: Student A is wrong. The question cannot be checked; a human
+  must look at it.
+- RED (leak): the description states the answer, or states a conclusion
+  the question asks for, so Student B did not need to reason.
+- ORANGE (missing info): Student A is right, but Student B answered
+  CANNOT_ANSWER or answered wrongly because information was missing.
+- GREEN (fair): both students reach the correct answer, and Student B had
+  to reason from the described details, as Student A did from the image.
+
+Note: the answer-text check is only a hint. A number can appear in the
+description innocently (for example as an axis value or a printed label the
+sighted student also sees). It is a leak only if it gives away the answer.
+
+Proof: for RED, "quote" must be the exact words copied from the description
+that give the answer away. For GREEN, quote the details Student B reasoned
+from. For ORANGE or INVALID, leave "quote" empty.
+
+Return JSON only:
+{
+  "status": "GREEN | ORANGE | RED | INVALID",
+  "reason": "one sentence",
+  "quote": "exact words copied from the description, or empty",
+  "evidence": "the words that leak, or the detail that is missing",
+  "fix_hint": "what to change in the description"
+}

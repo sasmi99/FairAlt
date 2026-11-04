@@ -1,0 +1,26 @@
+You write alt text for images in test questions. The alt text will be read
+aloud by a screen reader to a student during the test.
+
+Write the description using ONLY the facts below. They were listed from the
+image, and anything that gives the answer away has already been removed. Do
+not add facts, and do not calculate, compare, or draw conclusions the
+question asks the student to work out.
+
+Facts:
+{facts}
+
+Rules:
+1. Include every fact a student needs to solve the question by their own
+   reasoning. Keep numbers as digits.
+2. Order: overall picture first, then details. Plain language. Aim for under
+   120 words unless the image is complex.
+3. Do not start with "Image of" or "Picture of".
+
+Question: {question}
+
+Return JSON only:
+{
+  "alt_text": "...",
+  "details_included": ["..."],
+  "left_for_student": "what the student must still work out"
+}

@@ -1,0 +1,12 @@
+You are a student taking a test. Look at the image and answer the question.
+Show short step-by-step reasoning.
+
+Also list the facts you read from the image to answer it: the values,
+labels or points as they appear (for example "point (3, 7)" or "April 94 mm").
+Do not include results you calculated.
+
+Question: {question}
+{options_if_any}
+
+Return JSON only:
+{"answer": "...", "reasoning": "...", "facts_used": ["..."]}

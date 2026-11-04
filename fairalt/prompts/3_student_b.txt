@@ -1,0 +1,20 @@
+You are a blind student taking a test with a screen reader. You cannot see
+the image. You only have its description below.
+
+Answer using ONLY the description. Do not guess what the image probably
+shows, and do not use outside knowledge to fill gaps in the description.
+You may use normal subject knowledge a student would have (formulas,
+definitions, how to read a graph). If the description does not give enough
+information, answer CANNOT_ANSWER and say what is missing.
+
+Image description: {alt_text}
+Question: {question}
+{options_if_any}
+
+Return JSON only:
+{
+  "answer": "... or CANNOT_ANSWER",
+  "reasoning": "...",
+  "answer_given_in_description": true or false,
+  "missing": "what you needed but did not get, or empty"
+}

@@ -1,0 +1,6 @@
+Write a description of this image for a blind student taking this test.
+
+Question: {question}
+{options_if_any}
+
+Return JSON only: {"alt_text": "..."}

@@ -1,0 +1,347 @@
+{
+  "run_id": "20261102_145412",
+  "created_at": "2026-11-02T14:54:12",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "usage": {},
+  "duration_s": 0,
+  "items": [
+    {
+      "id": "q01",
+      "subject": "Algebra",
+      "question": "What is the slope of the line shown in the graph?",
+      "image": "images/q01_slope.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "2",
+        "reasoning": "The line passes through (0, 1) and (3, 7). Slope = (7 - 1)/(3 - 0) = 6/3 = 2. Check: the line also passes through (-1, -1) and (4, 9), which fits y = 2x + 1."
+      },
+      "plain": {
+        "alt_text": "Graph of a straight line with slope 2 on a coordinate grid, x from −1 to 5 and y from −1 to 9. The line rises from (−1, −1) to (4, 9), crossing the y-axis at the labeled point (0, 1) and passing through the labeled point (3, 7), consistent with y = 2x + 1.",
+        "student_b": {
+          "answer": "2",
+          "reasoning": "The description states the slope is 2. The labeled points confirm it: (7 − 1)/(3 − 0) = 6/3 = 2. The endpoints agree: (9 − (−1))/(4 − (−1)) = 10/5 = 2. This matches y = 2x + 1.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description directly states the slope the question asks for and also gives the equation y = 2x + 1, so Student B could read the answer without computing it.",
+          "evidence": "\"straight line with slope 2\" and \"consistent with y = 2x + 1\"",
+          "fix_hint": "Remove \"with slope 2\" and \"consistent with y = 2x + 1\"; describe only the line on the grid and the labeled points (0, 1) and (3, 7), plus the endpoints, so the slope has to be calculated.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Type of image: straight line on a coordinate grid",
+          "Axis ranges: x from -1 to 5, y from -1 to 9",
+          "Grid spacing of 1 unit",
+          "Line rises from left to right",
+          "Where the line enters and leaves the grid, and where it crosses the x-axis",
+          "Labeled point (0, 1) on the y-axis",
+          "Labeled point (3, 7)"
+        ],
+        "left_for_student": "Use the two labeled points to find the change in y and the change in x, then calculate the slope of the line."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Graph of a straight line on a coordinate grid. The x-axis runs from negative 1 to 5 and the y-axis from negative 1 to 9, with grid lines every 1 unit. The line rises from left to right. It enters at the bottom-left corner of the grid, near (negative 1, negative 1), crosses the x-axis between negative 1 and 0, and leaves the top edge of the grid near x equals 4. Two points on the line are marked with dots and labeled: (0, 1), on the y-axis, and (3, 7).",
+          "student_b": {
+            "answer": "2",
+            "reasoning": "The description gives two labeled points on the line: (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2. The other details agree with this. The line y = 2x + 1 passes through (-1, -1), crosses the x-axis at x = -0.5, and reaches y = 9 at x = 4.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students correctly found a slope of 2; the description gives only the labeled points (0, 1) and (3, 7) that the sighted student also sees, so Student B still had to compute rise over run.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Graph of a straight line on a coordinate grid. The x-axis runs from negative 1 to 5 and the y-axis from negative 1 to 9, with grid lines every 1 unit. The line rises from left to right. It enters at the bottom-left corner of the grid, near (negative 1, negative 1), crosses the x-axis between negative 1 and 0, and leaves the top edge of the grid near x equals 4. Two points on the line are marked with dots and labeled: (0, 1), on the y-axis, and (3, 7).",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q02",
+      "subject": "Statistics",
+      "question": "In which month did Riverton get the most rainfall?",
+      "image": "images/q02_bar.png",
+      "answer": "April",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q03",
+      "subject": "Statistics",
+      "question": "How did enrollment at Lakeside College change from 2015 to 2020?",
+      "image": "images/q03_trend.png",
+      "answer": "B",
+      "answer_type": "choice",
+      "options": [
+        "A) It decreased",
+        "B) It increased every year",
+        "C) It increased, then decreased",
+        "D) It stayed the same"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q04",
+      "subject": "Economics",
+      "question": "What percentage of the monthly budget goes to Food and Transport combined?",
+      "image": "images/q04_pie.png",
+      "answer": "35",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q05",
+      "subject": "Statistics",
+      "question": "How many students in Class 9B scored 80 or above?",
+      "image": "images/q05_hist.png",
+      "answer": "10",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q06",
+      "subject": "Biology",
+      "question": "Which letter labels the nucleus?",
+      "image": "images/q06_cell.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q07",
+      "subject": "Physics",
+      "question": "What is the current flowing in the circuit, in amperes?",
+      "image": "images/q07_circuit.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q08",
+      "subject": "Physics",
+      "question": "What is the size of the net force on the box, in newtons?",
+      "image": "images/q08_forces.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q09",
+      "subject": "Physics",
+      "question": "How far from the lens, in centimetres, is the image formed?",
+      "image": "images/q09_lens.png",
+      "answer": "15",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q10",
+      "subject": "Economics",
+      "question": "What is the equilibrium price in the market for notebooks, in dollars?",
+      "image": "images/q10_supply_demand.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q11",
+      "subject": "Statistics",
+      "question": "What type of correlation does the scatter plot show between hours studied and test score?",
+      "image": "images/q11_scatter.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A) Positive",
+        "B) Negative",
+        "C) No correlation"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q12",
+      "subject": "Geography",
+      "question": "In Country X, which age group has the largest percentage of females?",
+      "image": "images/q12_pyramid.png",
+      "answer": "20-29",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q13",
+      "subject": "Geometry",
+      "question": "What is the value of angle x, in degrees?",
+      "image": "images/q13_angle.png",
+      "answer": "70",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q14",
+      "subject": "Geography",
+      "question": "In which compass direction does the Silver River flow?",
+      "image": "images/q14_river.png",
+      "answer": "southeast",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q15",
+      "subject": "History",
+      "question": "How many years passed between the school being built and the bridge opening?",
+      "image": "images/q15_timeline.png",
+      "answer": "33",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    }
+  ]
+}

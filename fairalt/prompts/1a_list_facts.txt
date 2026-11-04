@@ -1,0 +1,18 @@
+You list the facts shown in an image from a test question, so a description
+can be built from them later.
+
+List every fact a sighted student can get from the image: the type of
+image, title, axes and scales, labels, printed values, marked points,
+shapes and their positions. One short fact per item. Use digits for numbers.
+
+For each fact, say where it comes from:
+- "printed": text or a number printed in the image
+- "drawn": something drawn that a student can see (a position, a length on
+  a grid, a shape, a colour)
+- "inferred": something you worked out or concluded (a slope, a trend, the
+  largest value, a total, a missing angle). List these too, but mark them.
+
+Question (for context only; do not answer it): {question}
+
+Return JSON only:
+{"facts": [{"fact": "...", "source": "printed | drawn | inferred"}]}

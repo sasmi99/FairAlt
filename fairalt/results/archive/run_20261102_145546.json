@@ -1,0 +1,523 @@
+{
+  "run_id": "20261102_145546",
+  "created_at": "2026-11-02T14:55:46",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "usage": {},
+  "duration_s": 0,
+  "items": [
+    {
+      "id": "q01",
+      "subject": "Algebra",
+      "question": "What is the slope of the line shown in the graph?",
+      "image": "images/q01_slope.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "student_a": {
+        "answer": "2",
+        "reasoning": "The line passes through (0, 1) and (3, 7). Slope = (7 - 1)/(3 - 0) = 6/3 = 2. Check: the line also passes through (-1, -1) and (4, 9), which fits y = 2x + 1."
+      },
+      "plain": {
+        "alt_text": "Graph of a straight line on a coordinate grid with x from −1 to 5 and y from −1 to 9. The line rises from left to right, passing through labeled points (0, 1) and (3, 7), giving a slope of 2 and a y-intercept of 1 (y = 2x + 1). It crosses the x-axis at x = −0.5.",
+        "student_b": {
+          "answer": "2",
+          "reasoning": "The description labels the points (0, 1) and (3, 7). Slope = (7 − 1)/(3 − 0) = 6/3 = 2. The description also states the slope is 2 and gives the equation y = 2x + 1, which agrees with the calculation.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description states the slope outright ('giving a slope of 2') and gives the equation y = 2x + 1, so Student B could answer without calculating anything from the points.",
+          "evidence": "giving a slope of 2 and a y-intercept of 1 (y = 2x + 1)",
+          "fix_hint": "Remove the stated slope, y-intercept, and equation. Keep only the grid ranges, that the line rises left to right, the labeled points (0, 1) and (3, 7), and optionally where it crosses the x-axis, so the slope must be computed.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Type of image: straight line on a coordinate grid",
+          "Axis labels x and y",
+          "x-axis range negative 1 to 5, y-axis range negative 1 to 9",
+          "Scale of 1 unit per grid line on both axes",
+          "Labeled point (0, 1) on the y-axis",
+          "Labeled point (3, 7)",
+          "Line passes through both marked points and extends to the edges of the grid"
+        ],
+        "left_for_student": "The student must use the two labeled points to find the change in y and the change in x, then calculate the slope of the line."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Graph of a straight line on a coordinate grid. The x-axis is labeled x and runs from negative 1 to 5. The y-axis is labeled y and runs from negative 1 to 9. Both axes are marked in steps of 1, with light grid lines at each whole number. Two points on the line are marked with dots and labeled: (0, 1), which lies on the y-axis, and (3, 7). The line passes through both points and continues past them to the lower-left and upper-right edges of the grid.",
+          "student_b": {
+            "answer": "2",
+            "reasoning": "The description gives two labeled points on the line, (0, 1) and (3, 7). Slope = (7 - 1) / (3 - 0) = 6 / 3 = 2.",
+            "answer_given_in_description": false,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "Both students correctly found a slope of 2, and Student B had to compute it from the two labeled points (0, 1) and (3, 7) given in the description, just as the sighted student read them from the graph.",
+            "evidence": "",
+            "fix_hint": "",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Graph of a straight line on a coordinate grid. The x-axis is labeled x and runs from negative 1 to 5. The y-axis is labeled y and runs from negative 1 to 9. Both axes are marked in steps of 1, with light grid lines at each whole number. Two points on the line are marked with dots and labeled: (0, 1), which lies on the y-axis, and (3, 7). The line passes through both points and continues past them to the lower-left and upper-right edges of the grid.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": true,
+        "approved_by": "sasmi",
+        "approved_at": "2026-11-02T14:56:38",
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q02",
+      "subject": "Statistics",
+      "question": "In which month did Riverton get the most rainfall?",
+      "image": "images/q02_bar.png",
+      "answer": "April",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "April",
+        "reasoning": "Step 1: Read the bar values: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55 mm. Step 2: Compare them. The largest value is 94 mm, which is April's bar. Step 3: So April had the most rainfall."
+      },
+      "plain": {
+        "alt_text": "Bar chart titled Monthly Rainfall in Riverton showing rainfall in millimeters from January to June: January 62, February 48, March 71, April 94, May 83, June 55. Rainfall peaks in April and is lowest in February.",
+        "student_b": {
+          "answer": "April",
+          "reasoning": "The description lists monthly rainfall as January 62 mm, February 48 mm, March 71 mm, April 94 mm, May 83 mm, and June 55 mm. The highest value is April at 94 mm. The description also says directly that rainfall peaks in April.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description states outright that rainfall peaks in April, which is the conclusion the question asks for, so Student B did not need to compare the values.",
+          "evidence": "Rainfall peaks in April and is lowest in February.",
+          "fix_hint": "Remove the final summary sentence and keep only the title, units, and the per-month values (January 62, February 48, March 71, April 94, May 83, June 55) so the listener must find the maximum themselves.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: vertical bar chart",
+          "Title: Monthly Rainfall in Riverton",
+          "Vertical axis label: Rainfall (mm)",
+          "Vertical axis scale: 0 to 100 in steps of 20",
+          "Horizontal axis categories: Jan, Feb, Mar, Apr, May, Jun",
+          "Bar color: green",
+          "Printed values above bars: Jan 62, Feb 48, Mar 71, Apr 94, May 83, Jun 55"
+        ],
+        "left_for_student": "Compare the six monthly rainfall values to determine which month had the most rainfall."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Vertical bar chart titled 'Monthly Rainfall in Riverton.' The vertical axis is labeled 'Rainfall (mm)' and runs from 0 to 100 in steps of 20. The horizontal axis shows six months, January through June, each with one green bar. The value printed above each bar is: January, 62; February, 48; March, 71; April, 94; May, 83; June, 55.",
+          "student_b": {
+            "answer": "April",
+            "reasoning": "The description gives each month's rainfall value: January 62, February 48, March 71, April 94, May 83, June 55. The largest is April at 94 mm.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description lists each month's printed bar value without saying which is highest, so Student B had to compare the numbers just as Student A did. 'April' appears only as an axis label the sighted student also sees.",
+            "evidence": "January, 62; February, 48; March, 71; April, 94; May, 83; June, 55 (labels and values only, no stated maximum)",
+            "fix_hint": "No change needed.",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Vertical bar chart titled 'Monthly Rainfall in Riverton.' The vertical axis is labeled 'Rainfall (mm)' and runs from 0 to 100 in steps of 20. The horizontal axis shows six months, January through June, each with one green bar. The value printed above each bar is: January, 62; February, 48; March, 71; April, 94; May, 83; June, 55.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": true,
+        "approved_by": "sasmi",
+        "approved_at": "2026-11-04T08:55:42",
+        "edited_alt_text": null,
+        "seconds": 12
+      },
+      "seconds": 19.0,
+      "usage": {
+        "calls": 7,
+        "prompt_tokens": 3768,
+        "completion_tokens": 1192,
+        "est_cost_usd": 0.0389
+      }
+    },
+    {
+      "id": "q03",
+      "subject": "Statistics",
+      "question": "How did enrollment at Lakeside College change from 2015 to 2020?",
+      "image": "images/q03_trend.png",
+      "answer": "B",
+      "answer_type": "choice",
+      "options": [
+        "A) It decreased",
+        "B) It increased every year",
+        "C) It increased, then decreased",
+        "D) It stayed the same"
+      ],
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "B",
+        "reasoning": "Step 1: Read the values from the graph: 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), 1520 (2020). Step 2: Compare each year with the one before it. Every value is higher than the previous one, so there is no decrease. Step 3: Overall, enrollment rose from 1200 to 1520, so it increased every year."
+      },
+      "plain": {
+        "alt_text": "Line chart titled Lakeside College Enrollment showing student numbers rising steadily from 2015 to 2020: 1200 in 2015, 1260 in 2016, 1310 in 2017, 1395 in 2018, 1440 in 2019, and 1520 in 2020, an overall increase of 320 students.",
+        "student_b": {
+          "answer": "B",
+          "reasoning": "The description gives enrollment values of 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019) and 1520 (2020). Each value is higher than the year before, and the description says numbers rose 'steadily'. So enrollment increased every year, with a total gain of 320 students.",
+          "answer_given_in_description": true,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "RED",
+          "reason": "The description states the trend the question asks about ('rising steadily' and 'an overall increase of 320 students'), so Student B did not need to compare the yearly values.",
+          "evidence": "showing student numbers rising steadily from 2015 to 2020 ... an overall increase of 320 students",
+          "fix_hint": "Remove the interpretive phrases 'rising steadily' and 'an overall increase of 320 students'. Describe only the chart title, axes, and the plotted values for each year (1200, 1260, 1310, 1395, 1440, 1520) so the student must compare them to find the trend.",
+          "answer_found_in_text": false
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: line graph with marked points connected by a line",
+          "Title: Lakeside College Enrollment",
+          "Horizontal axis label 'Year' with years 2015 to 2020",
+          "Vertical axis label 'Students' with scale 1100 to 1600 in steps of 100",
+          "Printed value for each year: 1200, 1260, 1310, 1395, 1440, 1520"
+        ],
+        "left_for_student": "Determine how enrollment changed from 2015 to 2020, including the direction of the change, the total amount of change, and any differences in year-to-year change."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Line graph titled 'Lakeside College Enrollment.' The horizontal axis is labeled 'Year' and shows 2015 through 2020. The vertical axis is labeled 'Students' and runs from 1100 to 1600 in steps of 100. Six points, one for each year, are joined by a single line. Each point is labeled with its value: 2015, 1200; 2016, 1260; 2017, 1310; 2018, 1395; 2019, 1440; 2020, 1520.",
+          "student_b": {
+            "answer": "B",
+            "reasoning": "The labeled values are 1200 (2015), 1260 (2016), 1310 (2017), 1395 (2018), 1440 (2019), and 1520 (2020). Each value is higher than the one before it, so enrollment rose every year, from 1200 to 1520 overall.",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The description lists only the printed data labels that the sighted student also sees, without stating the trend, so Student B had to compare consecutive values to conclude enrollment increased every year.",
+            "evidence": "",
+            "fix_hint": "No change needed; Student B's 'answer_given_in_description' flag reflects only the presence of printed point labels, not a stated conclusion.",
+            "answer_found_in_text": false
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Line graph titled 'Lakeside College Enrollment.' The horizontal axis is labeled 'Year' and shows 2015 through 2020. The vertical axis is labeled 'Students' and runs from 1100 to 1600 in steps of 100. Six points, one for each year, are joined by a single line. Each point is labeled with its value: 2015, 1200; 2016, 1260; 2017, 1310; 2018, 1395; 2019, 1440; 2020, 1520.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      },
+      "seconds": 21.4,
+      "usage": {
+        "calls": 7,
+        "prompt_tokens": 4322,
+        "completion_tokens": 1526,
+        "est_cost_usd": 0.0478
+      }
+    },
+    {
+      "id": "q04",
+      "subject": "Economics",
+      "question": "What percentage of the monthly budget goes to Food and Transport combined?",
+      "image": "images/q04_pie.png",
+      "answer": "35",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (FairAlt demo)",
+      "student_a": {
+        "answer": "35%",
+        "reasoning": "1. The chart labels Food as 20%. 2. It labels Transport as 15%. 3. Adding them gives 20% + 15% = 35%."
+      },
+      "plain": {
+        "alt_text": "Pie chart titled Monthly Household Budget showing spending shares: Housing 35%, Food 20%, Other 20%, Transport 15%, and Savings 10%.",
+        "student_b": {
+          "answer": "35%",
+          "reasoning": "The description gives Food as 20% and Transport as 15% of the monthly budget. Adding them gives 20% + 15% = 35%.",
+          "answer_given_in_description": false,
+          "missing": ""
+        },
+        "verdict": {
+          "status": "GREEN",
+          "reason": "The '35%' in the description is Housing's slice label, which Student A also saw. Student B still had to add Food (20%) and Transport (15%) to reach 35, just as Student A did.",
+          "evidence": "Housing 35% (an innocent printed label, not the combined Food+Transport answer)",
+          "fix_hint": "No change needed.",
+          "answer_found_in_text": true
+        }
+      },
+      "writer_notes": {
+        "details_included": [
+          "Chart type: pie chart",
+          "Title: Monthly Household Budget",
+          "Five categories with their printed percentages: Housing 35%, Food 20%, Transport 15%, Savings 10%, Other 20%",
+          "Clockwise order and approximate position of each slice, starting from the top"
+        ],
+        "left_for_student": "Identify the Food and Transport percentages and add them to find their combined share of the budget."
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "alt_text": "Pie chart titled 'Monthly Household Budget' with five slices, each labeled with a category and a percentage. Going clockwise from the top: Housing 35%, covering the right side; Food 20%, at the bottom; Transport 15%, at the lower left; Savings 10%, on the left; and Other 20%, at the upper left.",
+          "student_b": {
+            "answer": "35%",
+            "reasoning": "The description labels Food as 20% and Transport as 15%. Adding them gives 20% + 15% = 35%. As a check, all five slices sum to 100% (35 + 20 + 15 + 10 + 20).",
+            "answer_given_in_description": true,
+            "missing": ""
+          },
+          "verdict": {
+            "status": "GREEN",
+            "reason": "The '35%' in the description is the printed Housing label, not the Food+Transport total, so Student B still had to add Food 20% and Transport 15%, just as Student A did from the image.",
+            "evidence": "Housing 35% is an innocent coincidental match; the description gives only the individual slice values (Food 20%, Transport 15%).",
+            "fix_hint": "No change needed; the description transcribes the visible labels without stating the combined total.",
+            "answer_found_in_text": true
+          },
+          "what_changed": null
+        }
+      ],
+      "final_alt_text": "Pie chart titled 'Monthly Household Budget' with five slices, each labeled with a category and a percentage. Going clockwise from the top: Housing 35%, covering the right side; Food 20%, at the bottom; Transport 15%, at the lower left; Savings 10%, on the left; and Other 20%, at the upper left.",
+      "final_status": "GREEN",
+      "needs_human_reason": null,
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      },
+      "seconds": 17.9,
+      "usage": {
+        "calls": 7,
+        "prompt_tokens": 3701,
+        "completion_tokens": 1148,
+        "est_cost_usd": 0.0378
+      }
+    },
+    {
+      "id": "q05",
+      "subject": "Statistics",
+      "question": "How many students in Class 9B scored 80 or above?",
+      "image": "images/q05_hist.png",
+      "answer": "10",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q06",
+      "subject": "Biology",
+      "question": "Which letter labels the nucleus?",
+      "image": "images/q06_cell.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q07",
+      "subject": "Physics",
+      "question": "What is the current flowing in the circuit, in amperes?",
+      "image": "images/q07_circuit.png",
+      "answer": "2",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q08",
+      "subject": "Physics",
+      "question": "What is the size of the net force on the box, in newtons?",
+      "image": "images/q08_forces.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q09",
+      "subject": "Physics",
+      "question": "How far from the lens, in centimetres, is the image formed?",
+      "image": "images/q09_lens.png",
+      "answer": "15",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q10",
+      "subject": "Economics",
+      "question": "What is the equilibrium price in the market for notebooks, in dollars?",
+      "image": "images/q10_supply_demand.png",
+      "answer": "6",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q11",
+      "subject": "Statistics",
+      "question": "What type of correlation does the scatter plot show between hours studied and test score?",
+      "image": "images/q11_scatter.png",
+      "answer": "A",
+      "answer_type": "choice",
+      "options": [
+        "A) Positive",
+        "B) Negative",
+        "C) No correlation"
+      ],
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q12",
+      "subject": "Geography",
+      "question": "In Country X, which age group has the largest percentage of females?",
+      "image": "images/q12_pyramid.png",
+      "answer": "20-29",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q13",
+      "subject": "Geometry",
+      "question": "What is the value of angle x, in degrees?",
+      "image": "images/q13_angle.png",
+      "answer": "70",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q14",
+      "subject": "Geography",
+      "question": "In which compass direction does the Silver River flow?",
+      "image": "images/q14_river.png",
+      "answer": "southeast",
+      "answer_type": "short text",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    },
+    {
+      "id": "q15",
+      "subject": "History",
+      "question": "How many years passed between the school being built and the bridge opening?",
+      "image": "images/q15_timeline.png",
+      "answer": "33",
+      "answer_type": "number",
+      "options": null,
+      "source": "Original sample figure (Fair Alt Text demo)",
+      "final_status": null,
+      "attempts": [],
+      "review": {
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "edited_alt_text": null
+      }
+    }
+  ]
+}
